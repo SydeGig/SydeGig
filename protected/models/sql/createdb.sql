@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`e_id`, `fname`, `lname`) VALUES
+INSERT INTO `employee` (`e_id`,`email`, `fname`, `lname`) VALUES
 (1, "sam@sydegig.com", 'Sam', 'Sternberg');
 
 -- --------------------------------------------------------
