@@ -7,6 +7,7 @@
 -- Server version: 5.1.73-cll
 -- PHP Version: 5.4.23
 
+USE SydeGig;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
