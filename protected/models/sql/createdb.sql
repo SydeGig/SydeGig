@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `employer` (
 --
 
 INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
-(1, "rgoodell@nfl.com", 'National Football League', 'info@nfl.com', 'Football');
+(1, 'National Football League', 'info@nfl.com', 'Football');
 
 -- --------------------------------------------------------
 
