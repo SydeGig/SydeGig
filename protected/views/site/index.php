@@ -1,20 +1,43 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<head>
+    <style>
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen, projection" />
+    </style>
+</head>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<body>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+    
+    
+    
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<div class="jumbotron">
+    
+   
+        <h1>Welcome to SydeGig!</h1>
+        
+    
+
+        <div style="margin-top:20px">
+            <p class = "lead">
+             SydeGig is a skillsharing site that will be launching in a few months to 
+             revolutionize how you find work.  </p>
+            <p>Join our mailing list for updates on our progress.</p>
+      
+        
+        <p><a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-primary>Join the Mailing List  </a></p>
+   
+</div>
+
+
+
+</body>
+
+
+
+
