@@ -4838,3 +4838,159 @@ Stack trace:
 REQUEST_URI=/SydeGig/index.php/SydeGig
 HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
 ---
+2014/05/20 07:01:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/singup')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/singup
+---
+2014/05/20 07:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/singup')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/singup
+---
+2014/05/20 07:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "singup".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('singup')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('singup')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/singup')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/singup
+---
+2014/05/20 07:05:23 [error] [exception.CException] exception 'CException' with message 'SignupForm and its behaviors do not have a method or closure named "login".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:265
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(81): CComponent->__call('login', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(81): SignupForm->login()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signup')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/SydeGig/index.php/site/signup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/signup
+---
+2014/05/20 07:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/20 07:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/20 07:47:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage
+---
+2014/05/20 07:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage
+---
+2014/05/20 07:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('contact.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('contact.php')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact.ph...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/contact.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage
+---
+2014/05/20 07:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('contact.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('contact.php')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact.ph...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/contact.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage
+---
+2014/05/20 07:49:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage.php')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage.p...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/contact.php
+---
+2014/05/20 07:50:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage.php')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage.p...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/contact.php
+---
+2014/05/20 07:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.com".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('www.google.com')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('www.google.com')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/www.google...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/www.google.com
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage.php
+---
+2014/05/20 07:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.com".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('www.google.com')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('www.google.com')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/www.google...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/www.google.com
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/HomePage.php
+---

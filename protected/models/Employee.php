@@ -1,27 +1,32 @@
 <?php
 
 /**
- * This is the model class for table "Employee".
+ * This is the model class for table "employee".
  *
- * The followings are the available columns in table 'Employee':
- * @property string $FirstName
- * @property string $LastName
- * @property string $Email
- * @property integer $PhoneNumber
- * @property string $Skill
- * @property string $Status
- * @property string $UserName
- * @property string $Password
- * @property integer $id
+ * The followings are the available columns in table 'employee':
+ * @property integer $e_id
+ * @property string $email
+ * @property string $fname
+ * @property string $lname
  */
 class Employee extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return Employee the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'Employee';
+		return 'employee';
 	}
 
 	/**
@@ -32,12 +37,11 @@ class Employee extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('FirstName, LastName, Email, PhoneNumber, Skill, Status, UserName, Password, id', 'required'),
-			array('PhoneNumber, id', 'numerical', 'integerOnly'=>true),
-			array('FirstName, LastName, Email, UserName, Password', 'length', 'max'=>255),
+			array('e_id', 'numerical', 'integerOnly'=>true),
+			array('email, fname, lname', 'length', 'max'=>255),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('FirstName, LastName, Email, PhoneNumber, Skill, Status, UserName, Password, id', 'safe', 'on'=>'search'),
+			// Please remove those attributes that should not be searched.
+			array('e_id, email, fname, lname', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,59 +62,31 @@ class Employee extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'FirstName' => 'First Name',
-			'LastName' => 'Last Name',
-			'Email' => 'Email',
-			'PhoneNumber' => 'Phone Number',
-			'Skill' => 'Skill',
-			'Status' => 'Status',
-			'UserName' => 'User Name',
-			'Password' => 'Password',
-			'id' => 'ID',
+			'e_id' => 'E',
+			'email' => 'Email',
+			'fname' => 'Fname',
+			'lname' => 'Lname',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('FirstName',$this->FirstName,true);
-		$criteria->compare('LastName',$this->LastName,true);
-		$criteria->compare('Email',$this->Email,true);
-		$criteria->compare('PhoneNumber',$this->PhoneNumber);
-		$criteria->compare('Skill',$this->Skill,true);
-		$criteria->compare('Status',$this->Status,true);
-		$criteria->compare('UserName',$this->UserName,true);
-		$criteria->compare('Password',$this->Password,true);
-		$criteria->compare('id',$this->id);
+		$criteria->compare('e_id',$this->e_id);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('fname',$this->fname,true);
+		$criteria->compare('lname',$this->lname,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Employee the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }

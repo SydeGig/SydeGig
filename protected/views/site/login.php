@@ -1,6 +1,6 @@
 <?php
 /* @var $this SiteController */
-/* @var $model LoginForm */
+/* @var $model SingupForm */
 /* @var $form CActiveForm  */
 
 $this->pageTitle=Yii::app()->name . ' - Login';
@@ -35,7 +35,7 @@ $this->breadcrumbs=array(
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
+			Hint: Your email address is a good choice for a username.
 		</p>
 	</div>
 
