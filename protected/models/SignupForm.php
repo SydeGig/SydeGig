@@ -54,6 +54,7 @@ class SignupForm extends CFormModel
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->validateNewUser())
 				$this->addError('password','Incorrect username or password.');
+                                echo "password not correct";
 		}
 	}
 

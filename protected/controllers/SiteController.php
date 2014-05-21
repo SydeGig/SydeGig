@@ -81,16 +81,24 @@ class SiteController extends Controller {
             // validate user input and redirect to the previous page if valid
             if ($model->validate()) {
                 $newEmployee = new Employee(); 
-                $newEmployee->email = $SignupForm['email'];
+                $newEmployee->email = $SignupForm['username'];
+                // Permissions
+                $newPermissions = new Permissions(); 
+                $newPermissions->email = $newEmployee->email; 
+                $newPermissions->password = password_hash($SignupForm['password'], PASSWORD_DEFAULT);
+                $newPermissions->save();
+                //back to employee creations
                 $newEmployee->fname = $SignupForm['fname']; 
                 $newEmployee->lname = $SignupForm['lname']; 
                 $connection = Yii::app()->db;
-                $calculateE_ID = "select max(e_id) from employee";
+                $calculateE_ID = "select max(e_id) maximum from employee";
                 $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
-                $newEmployee-> $maxE_ID['e_id'] + 1; 
+                $emp_id = $maxE_ID['maximum'];
+                $emp_id++;
+                $newEmployee->e_id = $emp_id;
                 $newEmployee->save(); 
                 
-
+                echo"here";
                 $this->render('HomePage');
             }
         } else {
@@ -116,7 +124,7 @@ class SiteController extends Controller {
             $model->attributes = $_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
-
+                echo"here";
                 $this->render('HomePage');
             }
         } else {

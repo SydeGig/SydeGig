@@ -41,6 +41,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
+            <!-- should it be a has value from the start?? -->
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>

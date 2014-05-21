@@ -12,27 +12,27 @@ $this->pageTitle = Yii::app()->name;
 
 <body>
 
-    
-    
-    
 
-<div class="jumbotron">
-    
-   
+
+
+
+    <div class="jumbotron">
+
+
         <h1>Welcome to SydeGig!</h1>
-        
-    
+
+
 
         <div style="margin-top:20px">
             <p class = "lead">
-             SydeGig is a skillsharing site that will be launching in a few months to 
-             revolutionize how you find work.  </p>
-            <p>Join our mailing list for updates on our progress.</p>
-      
-        
-        <p><a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-primary>Join the Mailing List  </a></p>
-   
-</div>
+                SydeGig is a skillsharing site that will be launching in a few months to 
+                revolutionize how you find work.  </p>
+            <p>Sign up for updates on our progress.</p>
+
+
+            <p><a href=/SydeGig/index.php/site/signup class=btn btn-primary>Join SydeGig  </a></p>
+
+        </div>
 
 
 
