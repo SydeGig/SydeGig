@@ -22,21 +22,26 @@ class UserIdentity extends CUserIdentity {
 
         $users = $connection->createCommand($credentialsQuery)->queryAll();
 
-
-        $sessionUser = "blank";
+        // additional password validation
+        // name validation
+        // email address verification
+        
+        $sessionUser = "empty";
 
         foreach ($users as $user) {
             /* If there is no user already registered with this email */
             if ($user['email'] !== $this->username) {
                 $sessionUser = $user;
+            } else {
+                $sessionUser = "already taken";
             }
         }
-        if ($sessionUser !== "blank") {
+        if ($sessionUser !== "already taken") {
             $this->errorCode = self::ERROR_NONE;
         } else
             $this->errorCode = self::ERROR_USERNAME_INVALID;
 
-
+      
         return !$this->errorCode;
     }
 
@@ -51,7 +56,7 @@ class UserIdentity extends CUserIdentity {
         $sessionUser = "blank";
 
         foreach ($users as $user) {
-            if ($user['email'] == $this->username && $user['password'] == $this->password) {
+            if ($user['email'] == $this->username && password_verify($user['password'],password_hash($user['password'],PASSWORD_DEFAULT))) {
                 $sessionUser = $user;
             }
         }
