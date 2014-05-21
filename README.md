@@ -27,4 +27,7 @@ database file included in protected/models/sql/createdb.sql
 
 may need to replace path variables and settings with those for your own system. 
 
+Throught the project
+Yii::app()->user->id refers to a users' email address.
+Their email address must be treated as a primary key for the employee and Permissions tables and we will not allow multiple users with the same email address to join SydeGig.
 _______________________________
