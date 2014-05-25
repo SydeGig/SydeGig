@@ -16,6 +16,7 @@ class UserIdentity extends CUserIdentity {
      * @return boolean whether authentication succeeds.
      */
     public function validateNewUser() {
+       
         $connection = Yii::app()->db;
 
         $credentialsQuery = "select * from Permissions";
@@ -38,6 +39,7 @@ class UserIdentity extends CUserIdentity {
         }
         if ($sessionUser !== "already taken") {
             $this->errorCode = self::ERROR_NONE;
+           
         } else
             $this->errorCode = self::ERROR_USERNAME_INVALID;
 

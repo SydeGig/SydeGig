@@ -5,15 +5,14 @@
  * Signup is the data structure for keeping
  * user signup form data. It is used by the 'Signup' action of 'SiteController'.
  */
-class SignupForm extends CFormModel
+class BusinessSignupForm extends CFormModel
 {
 	public $username;
 	public $password;
-        public $fname;
-        public $lname; 
+        public $businessName;
+        public $industry; 
         public $e_id; 
 	public $rememberMe;
-        public $userType; 
 
 	private $_identity;
 
@@ -26,24 +25,13 @@ class SignupForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('username, password, fname, lname, userType', 'required'),
-			// rememberMe needs to be a boolean
-			array('rememberMe', 'boolean'),
+			array('username, password, businessName, industry', 'required'),
 			// password needs to be authenticated
 			array('password', 'authenticate'),
 		);
 	}
 
-	/**
-	 * Declares attribute labels.
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'rememberMe'=>'Remember me next time',
-		);
-	}
-
+	
 	/**
 	 * Checks the credentials for errors and attempts to validate the username
 	 * This is the 'authenticate' validator as declared in rules().
@@ -55,7 +43,7 @@ class SignupForm extends CFormModel
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->validateNewUser())
 				$this->addError('password','Incorrect username or password.');
-                                echo "password not correct";
+                                
 		}
 	}
 

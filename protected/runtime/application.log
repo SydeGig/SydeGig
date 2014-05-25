@@ -5290,3 +5290,963 @@ REQUEST_URI=/SydeGig/index.php/site/login
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/components/UserIdentity.php (59)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/models/LoginForm.php (52)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (126)
+2014/05/21 23:02:05 [error] [php] Undefined variable: credentialsQuery (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php:50)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(128): SiteController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/login
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (50)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (128)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/21 23:02:16 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@sydegig.com' at line 1. The SQL statement executed was: select fname name from employee where email =sam@sydegig.com.
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (50)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (128)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/21 23:02:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@sydegig.com' at line 1. The SQL statement executed was: select fname name from employee where email =sam@sydegig.com' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php(50): CDbCommand->queryRow()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', NULL, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('HomePage', NULL, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(128): CController->render('HomePage')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/SydeGig/index.php/site/login
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
+---
+2014/05/21 23:03:34 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''sam@sydegig.com\'' at line 1. The SQL statement executed was: select fname name from employee where email = 'sam@sydegig.com\'.
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (50)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (128)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/21 23:03:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''sam@sydegig.com\'' at line 1. The SQL statement executed was: select fname name from employee where email = 'sam@sydegig.com\'' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php(50): CDbCommand->queryRow()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', NULL, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('HomePage', NULL, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(128): CController->render('HomePage')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/SydeGig/index.php/site/login
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
+---
+2014/05/23 06:59:15 [error] [exception.CException] exception 'CException' with message 'Property "SignupForm.userType" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(2255): CComponent->__get('userType')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(SignupForm), 'userType')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(SignupForm), 'userType', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/signup.php(59): CActiveForm->dropDownList(Object(SignupForm), 'userType', Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('signup', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(105): CController->render('signup', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/SydeGig/index.php/site/signup
+HTTP_REFERER=http://localhost/Sydegig/index.php
+---
+2014/05/23 07:39:08 [error] [php] include(UserTypeForm.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/YiiBase.php:421)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(69): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/signup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (69)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 07:40:28 [error] [php] include(UserTypeForm.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/YiiBase.php:421)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(69): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/signup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (69)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 07:40:29 [error] [php] include(UserTypeForm.php): failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/YiiBase.php:421)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(69): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/signup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (69)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 21:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:55:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:56:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:57:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:58:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 21:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usertype".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('usertype')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:03:01 [error] [exception.CException] exception 'CException' with message 'Property "UserTypeForm.rememberMe" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(2255): CComponent->__get('rememberMe')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(1506): CHtml::resolveValue(Object(UserTypeForm), 'rememberMe')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/widgets/CActiveForm.php(747): CHtml::activeCheckBox(Object(UserTypeForm), 'rememberMe', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/usertype.php(44): CActiveForm->checkBox(Object(UserTypeForm), 'rememberMe')
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('usertype', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(53): CController->render('usertype', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionUsertype()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#15 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:03:09 [error] [exception.CException] exception 'CException' with message 'Property "UserTypeForm.rememberMe" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(2255): CComponent->__get('rememberMe')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(1506): CHtml::resolveValue(Object(UserTypeForm), 'rememberMe')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/widgets/CActiveForm.php(747): CHtml::activeCheckBox(Object(UserTypeForm), 'rememberMe', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/usertype.php(44): CActiveForm->checkBox(Object(UserTypeForm), 'rememberMe')
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('usertype', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(53): CController->render('usertype', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionUsertype()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#15 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:03:10 [error] [exception.CException] exception 'CException' with message 'Property "UserTypeForm.rememberMe" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(2255): CComponent->__get('rememberMe')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/helpers/CHtml.php(1506): CHtml::resolveValue(Object(UserTypeForm), 'rememberMe')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/widgets/CActiveForm.php(747): CHtml::activeCheckBox(Object(UserTypeForm), 'rememberMe', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/usertype.php(44): CActiveForm->checkBox(Object(UserTypeForm), 'rememberMe')
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('usertype', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(53): CController->render('usertype', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionUsertype()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('usertype')
+#14 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usertype')
+#15 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/SydeGig/index.php/site/usertype
+---
+2014/05/23 22:08:51 [error] [php] Undefined variable: userType (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/models/UserTypeForm.php:36)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/usertype
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/models/UserTypeForm.php (36)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (57)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 22:09:29 [error] [php] Use of undefined constant userType - assumed 'userType' (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/models/UserTypeForm.php:36)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/usertype
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/models/UserTypeForm.php (36)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (57)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 22:13:54 [error] [php] Undefined variable: model (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/usertype.php:31)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(53): SiteController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionUsertype()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/usertype
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/usertype.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (53)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/23 22:29:27 [error] [php] Undefined variable: UTForm (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php:95)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/signup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (95)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:01:01 [error] [php] Undefined index: SignupForm (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php:96)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/signup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:02:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/Sydegig/index.php
+---
+2014/05/25 04:21:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:21:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "signupBusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('signupBusiness')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('signupBusiness')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signupBusi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/signupBusiness
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:22:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "businessSignup".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('businessSignup')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:22:39 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "signupbusiness".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(782): CController->renderPartial('signupbusiness', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(106): CController->render('signupbusiness', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/
+---
+2014/05/25 04:30:43 [warning] [application] Failed to set unsafe attribute "username" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:30:43 [warning] [application] Failed to set unsafe attribute "businessName" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:30:43 [warning] [application] Failed to set unsafe attribute "industry" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:30:43 [error] [exception.CException] exception 'CException' with message 'Property "BusinessSignupForm.email" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CRequiredValidator.php(51): CComponent->__get('email')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(BusinessSignupForm), 'email')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CModel.php(159): CValidator->validate(Object(BusinessSignupForm), NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(82): CModel->validate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:31:38 [warning] [application] Failed to set unsafe attribute "businessName" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:31:38 [warning] [application] Failed to set unsafe attribute "industry" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:31:38 [error] [exception.CException] exception 'CException' with message 'Property "BusinessSignupForm.Company" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CRequiredValidator.php(51): CComponent->__get('Company')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(BusinessSignupForm), 'Company')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CModel.php(159): CValidator->validate(Object(BusinessSignupForm), NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(82): CModel->validate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:32:13 [warning] [application] Failed to set unsafe attribute "industry" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:32:13 [error] [exception.CException] exception 'CException' with message 'Property "BusinessSignupForm.Industry" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CRequiredValidator.php(51): CComponent->__get('Industry')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(BusinessSignupForm), 'Industry')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CModel.php(159): CValidator->validate(Object(BusinessSignupForm), NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(82): CModel->validate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:32:21 [warning] [application] Failed to set unsafe attribute "industry" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:32:21 [error] [exception.CException] exception 'CException' with message 'Property "BusinessSignupForm.Industry" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CRequiredValidator.php(51): CComponent->__get('Industry')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(BusinessSignupForm), 'Industry')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CModel.php(159): CValidator->validate(Object(BusinessSignupForm), NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(82): CModel->validate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:32:23 [warning] [application] Failed to set unsafe attribute "industry" of "BusinessSignupForm".
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (79)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:32:23 [error] [exception.CException] exception 'CException' with message 'Property "BusinessSignupForm.Industry" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CRequiredValidator.php(51): CComponent->__get('Industry')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/validators/CValidator.php(213): CRequiredValidator->validateAttribute(Object(BusinessSignupForm), 'Industry')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CModel.php(159): CValidator->validate(Object(BusinessSignupForm), NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(82): CModel->validate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:32:31 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_id' in 'field list'. The SQL statement executed was: select max(e_id) maximum from employer.
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (96)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 04:32:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_id' in 'field list'. The SQL statement executed was: select max(e_id) maximum from employer' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(96): CDbCommand->queryRow()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 04:51:49 [error] [exception.CException] exception 'CException' with message 'Property "Employer.e_id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CComponent.php:173
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/db/ar/CActiveRecord.php(159): CComponent->__set('e_id', 2)
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(100): CActiveRecord->__set('e_id', 2)
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/businessSignup
+---
+2014/05/25 05:07:07 [error] [php] Undefined index: name (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php:60)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(104): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (60)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (104)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 05:08:00 [error] [php] Undefined index: bname (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php:60)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(104): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (60)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (104)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 05:08:27 [error] [php] Undefined index: bname (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php:58)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(104): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (104)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 05:09:00 [error] [php] Undefined index: name (/Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php:58)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(869): SiteController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php(104): SiteController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(286): SiteController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CWebApplication->run()
+REQUEST_URI=/SydeGig/index.php/site/businessSignup
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (104)
+in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)

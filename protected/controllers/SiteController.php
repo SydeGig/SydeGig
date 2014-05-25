@@ -7,13 +7,13 @@ class SiteController extends Controller {
      */
     public function actions() {
         return array(
-            // captcha action renders the CAPTCHA image displayed on the contact page
+// captcha action renders the CAPTCHA image displayed on the contact page
             'captcha' => array(
                 'class' => 'CCaptchaAction',
                 'backColor' => 0xFFFFFF,
             ),
             // page action renders "static" pages stored under 'protected/views/site/pages'
-            // They can be accessed via: index.php?r=site/page&view=FileName
+// They can be accessed via: index.php?r=site/page&view=FileName
             'page' => array(
                 'class' => 'CViewAction',
             ),
@@ -25,8 +25,8 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        // renders the view file 'protected/views/site/index.php'
-        // using the default layout 'protected/views/layouts/main.php'
+// renders the view file 'protected/views/site/index.php'
+// using the default layout 'protected/views/layouts/main.php'
         $this->render('index');
     }
 
@@ -65,47 +65,94 @@ class SiteController extends Controller {
         $this->render('contact', array('model' => $model));
     }
 
-    public function actionSignup() {
-        $model = new SignupForm();
+    public function actionBusinessSignup() {
+          $model = new BusinessSignupForm;
 
-        // if it is ajax validation request
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'signup-form') {
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'business-signup-form') {
+
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
-
-        // collect user input data
-        if (isset($_POST['SignupForm'])) {
-            $model->attributes = $_POST['SignupForm'];
-            $SignupForm = $_POST['SignupForm']; 
-            // validate user input and redirect to the previous page if valid
+        if (isset($_POST['BusinessSignupForm'])) {
+           
+            $model->attributes = $_POST['BusinessSignupForm'];
+            $BusinessSignupForm = $_POST['BusinessSignupForm'];
+// validate user input and redirect to the previous page if valid
             if ($model->validate()) {
-                $newEmployee = new Employee(); 
+               
+                $newEmployer = new Employer();
+            
+                $newEmployer->email = $BusinessSignupForm['username'];
+// Permissions
+                $newPermissions = new Permissions();
+                $newPermissions->email = $newEmployer->email;
+                $newPermissions->password = password_hash($BusinessSignupForm['password'], PASSWORD_DEFAULT);
+                $newPermissions->save();
+//back to employee creations
+                $newEmployer->name = $BusinessSignupForm['businessName'];
+                $newEmployer->industry = $BusinessSignupForm['industry'];
+                $connection = Yii::app()->db;
+                $calculateE_ID = "select max(eid) maximum from employer";
+                $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
+                $emp_id = $maxE_ID['maximum'];
+                $emp_id++;
+                $newEmployer->eid = $emp_id;
+                $newEmployer->save();
+
+               Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
+                $this->renderPartial('HomePage');
+            }
+        } else {
+            $this->render('businessSignup', array('model' => $model));
+        } 
+    }
+    
+    public function actionSignup() {
+
+
+        $model = new SignupForm;
+
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'signup-form') {
+
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        if (isset($_POST['SignupForm'])) {
+           
+            $model->attributes = $_POST['SignupForm'];
+            $SignupForm = $_POST['SignupForm'];
+// validate user input and redirect to the previous page if valid
+            if ($model->validate()) {
+
+                $newEmployee = new Employee();
                 $newEmployee->email = $SignupForm['username'];
-                // Permissions
-                $newPermissions = new Permissions(); 
-                $newPermissions->email = $newEmployee->email; 
+// Permissions
+                $newPermissions = new Permissions();
+                $newPermissions->email = $newEmployee->email;
                 $newPermissions->password = password_hash($SignupForm['password'], PASSWORD_DEFAULT);
                 $newPermissions->save();
-                //back to employee creations
-                $newEmployee->fname = $SignupForm['fname']; 
-                $newEmployee->lname = $SignupForm['lname']; 
+//back to employee creations
+                $newEmployee->fname = $SignupForm['fname'];
+                $newEmployee->lname = $SignupForm['lname'];
                 $connection = Yii::app()->db;
                 $calculateE_ID = "select max(e_id) maximum from employee";
                 $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
                 $emp_id = $maxE_ID['maximum'];
                 $emp_id++;
                 $newEmployee->e_id = $emp_id;
-                $newEmployee->save(); 
-                
-                echo"here";
-                $this->render('HomePage');
+                $newEmployee->save();
+
+              Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
+                $this->renderPartial('HomePage');
             }
         } else {
             $this->render('signup', array('model' => $model));
         }
-        // display the signup form	
     }
+
+// display the signup form
 
     /**
      * Displays the login page
@@ -113,24 +160,23 @@ class SiteController extends Controller {
     public function actionLogin() {
         $model = new LoginForm;
 
-        // if it is ajax validation request
+// if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
 
-        // collect user input data
+// collect user input data
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
-            // validate user input and redirect to the previous page if valid
+// validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
-                echo"here";
                 $this->render('HomePage');
             }
         } else {
             $this->render('login', array('model' => $model));
         }
-        // display the login form	
+// display the login form	
     }
 
     /**

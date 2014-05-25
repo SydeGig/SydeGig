@@ -42,7 +42,14 @@
 
 
           <div class=inner cover>
-            <h1 class=cover-heading>Welcome to SydeGig <?php echo Yii::app()->user->id; ?> !</h1>
+            <h1 class=cover-heading>Welcome to SydeGig <?php 
+            
+            echo Yii::app()->user->id;
+         
+       
+       
+            
+            ?>!</h1>
             <p class=lead>Next Level Skill Sharing</p>
             <p class=lead>
               <a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-lg btn-default>Contact Us</a>

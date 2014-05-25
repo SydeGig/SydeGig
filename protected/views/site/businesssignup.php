@@ -3,19 +3,19 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Signup';
+$this->pageTitle=Yii::app()->name . ' - BusinessSignup';
 $this->breadcrumbs=array(
-	'Signup',
+	'BusinessSignup',
 );
 ?>
 
-<h1>New User Signup</h1>
+<h1>New Business Signup</h1>
 
 <p>Please fill out the following form with your desired login credentials:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'signup-form',
+	'id'=>'business-signup-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -30,14 +30,14 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'username'); ?>
 	</div>
         <div class="row">
-		<?php echo $form->labelEx($model,'First Name'); ?>
-		<?php echo $form->textField($model,'fname'); ?>
-		<?php echo $form->error($model,'fname'); ?>
+		<?php echo $form->labelEx($model,'businessName'); ?>
+		<?php echo $form->textField($model,'businessName'); ?>
+		<?php echo $form->error($model,'businessName'); ?>
 	</div>
         <div class="row">
-		<?php echo $form->labelEx($model,'Last Name'); ?>
-		<?php echo $form->textField($model,'lname'); ?>
-		<?php echo $form->error($model,'lname'); ?>
+		<?php echo $form->labelEx($model,'industry'); ?>
+		<?php echo $form->textField($model,'industry'); ?>
+		<?php echo $form->error($model,'industry'); ?>
 	</div>
 
 	<div class="row">
@@ -45,18 +45,9 @@ $this->breadcrumbs=array(
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: Your email address is a good username.
-		</p>
+		
 	</div>
         
-    
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Signup'); ?>
