@@ -6250,3 +6250,25 @@ REQUEST_URI=/SydeGig/index.php/site/businessSignup
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/HomePage.php (58)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (104)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/25 22:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.com".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('www.google.com')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('www.google.com')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/www.google...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/www.google.com
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
+---
+2014/05/25 22:26:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "www.google.com".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('www.google.com')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('www.google.com')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/www.google...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/www.google.com
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
+---

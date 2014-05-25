@@ -55,6 +55,15 @@
               <a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-lg btn-default>Contact Us</a>
             </p>
           </div>
+              
+              <!-- Need to validate user type -->
+              <button type="button" class="btn btn-default btn-lg">
+                  <span class="glyphicon glyphicon-plus"></span> <a href= "/google.com"><font color="black"> Add Gigs </font> </a>
+</button>
+              
+                 <button type="button" class="btn btn-default btn-lg">
+                  <span class="glyphicon glyphicon-user"></span> <a href= "/google.com"><font color="black"> View Available Employees </font> </a>
+</button>
 
           <div class=mastfoot>
             <div class=inner>
