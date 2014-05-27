@@ -37,6 +37,7 @@ class Gig extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('gid, employee_id, employer_id', 'numerical', 'integerOnly'=>true),
+                        array('Title', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('gid, employee_id, employer_id', 'safe', 'on'=>'search'),

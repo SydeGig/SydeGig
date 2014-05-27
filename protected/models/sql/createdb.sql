@@ -70,15 +70,16 @@ INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
 CREATE TABLE IF NOT EXISTS `gig` (
   `gid` int(11) DEFAULT NULL,
   `employee_id` int(11) DEFAULT NULL,
-  `employer_id` int(11) DEFAULT NULL
+  `employer_id` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gig`
 --
 
-INSERT INTO `gig` (`gid`, `employee_id`, `employer_id`) VALUES
-(1, 1, 1);
+INSERT INTO `gig` (`gid`, `employee_id`, `employer_id`,`title`) VALUES
+(1, 1, 1,"Commissioner");
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -93,3 +94,12 @@ INSERT INTO `Permissions` (`email`,`password`) VALUES ('sam@sydegig.com','parksl
 INSERT INTO `Permissions` (`email`,`password`) VALUES ('admin','admin');
 INSERT INTO `Permissions` (`email`,`password`) VALUES ('demo','demo');
 
+Create table if not exists `PostedGigs` (
+    `pgid` int(11) DEFAULT NULL,
+    `title` varchar (255) DEFAULT NULL,
+    `employer_id` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+
+INSERT INTO `PostedGigs` (`pgid`,`title`,`employer_id`) VALUES(1,'CEO',2);
+    
+    

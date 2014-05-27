@@ -6,6 +6,8 @@
  * data can identity the user.
  */
 class UserIdentity extends CUserIdentity {
+    
+    public $_userType;
 
     /**
      * Authenticates a user.
@@ -62,16 +64,20 @@ class UserIdentity extends CUserIdentity {
                 $sessionUser = $user;
             }
         }
-
-
+        // make sure this is only form businesses
+        $this->_userType = "Business";
         if ($sessionUser !== "blank") {
             $this->errorCode = self::ERROR_NONE;
             /* fix to include incorrect username error */
         } else
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
 
-
+        $this->setState("userType",$this->_userType);
         return !$this->errorCode;
+    }
+    
+    public function getUserType(){
+        return $this->_userType;
     }
 
 }

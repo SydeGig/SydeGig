@@ -19,7 +19,52 @@ class SiteController extends Controller {
             ),
         );
     }
+    
+    public function actionAvailableGigs() {
+        $this->render("availableGigs");
+    }
 
+    public function actionAvailable() {
+        $this->render("available");
+    }
+    
+    public function actionJobPost() {
+       $model = new JobPostForm;
+
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'job-post-form') {
+
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        if (isset($_POST['JobPostForm'])) {
+            
+            $model->attributes = $_POST['JobPostForm'];
+            $JobPostForm = $_POST['JobPostForm'];
+// validate user input and redirect to the previous page if valid
+            if ($model->validate()) {
+               $connection = Yii::app()->db;
+                $newGig = new PostedGig();
+                // need to find employer_id; 
+                $newGig->employer_id = $connection->createCommand("select eid e from employer where email='".$JobPostForm['username']."'")->queryRow()['e'];
+
+//back to employee creations
+                $newGig->title = $JobPostForm['title']; 
+                $connection = Yii::app()->db;
+                $calculateE_ID = "select max(pgid) maximum from PostedGigs";
+                $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
+                $emp_id = $maxE_ID['maximum'];
+                $emp_id++;
+                $newGig->pgid = $emp_id;
+                $newGig->save();
+
+               Yii::app()->user->setFlash('success', 'Gig Posted.');
+                $this->renderPartial('HomePage');
+            }
+        } else {
+            $this->render('jobpost', array('model' => $model));
+        } 
+    }
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.

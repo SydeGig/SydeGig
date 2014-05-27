@@ -1,6 +1,15 @@
 <?php /* @var $this Controller */ ?>
 
-
+<?php
+$flashMessages = Yii::app()->user->getFlashes();
+if ($flashMessages) {
+    echo '<ul class="flashes">';
+    foreach($flashMessages as $key => $message) {
+        echo '<li><div class="flash-' . $key . '">' . $message . "</div></li>\n";
+    }
+    echo '</ul>';
+}
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">

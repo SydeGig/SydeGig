@@ -1,12 +1,19 @@
 
+<?php if(Yii::app()->user->hasFlash('success')):?>
+    <div class="info">
+        <?php echo Yii::app()->user->getFlash('success'); ?>
+    </div>
+<?php endif; ?>
+
+
 
 
 <!DOCTYPE html>
 <html lang=en>
-  <head>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen, projection" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/cover.css" media="screen, projection" />
- </head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/cover.css" media="screen, projection" />
+    </head>
 
 
     <meta charset=utf-8>
@@ -19,7 +26,7 @@
     <title>Cover Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    
+
 
     <!-- Just for debugging purposes. Dont actually copy this line! -->
     <!--[if lt IE 9]><script src=../../assets/js/ie8-responsive-file-warning.js></script><![endif]-->
@@ -29,51 +36,73 @@
       <script src=https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js></script>
       <script src=https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
     <div class=site-wrapper>
 
-      <div class=site-wrapper-inner>
+        <div class=site-wrapper-inner>
 
-          <div class="cover-container">
+            <div class="cover-container">
 
 
 
-          <div class=inner cover>
-            <h1 class=cover-heading>Welcome to SydeGig <?php 
-            
-            echo Yii::app()->user->id;
-         
-       
-       
-            
-            ?>!</h1>
-            <p class=lead>Next Level Skill Sharing</p>
-            <p class=lead>
-              <a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-lg btn-default>Contact Us</a>
-            </p>
-          </div>
+                <div class=inner cover>
+                    <h1 class=cover-heading>Welcome to SydeGig <?php
+                        echo Yii::app()->user->id;
+                        ?>!</h1>
+                    <p class=lead>Next Level Skill Sharing</p>
+                    <p class=lead>
+                        <a href=mailto:sam%40sydegig.com?subject=Mailing%20List class=btn btn-lg btn-default>Contact Us</a>
+                    </p>
+                </div>
+
+                
+                <?php 
+                // there is definitely a better way to do this
+                    $connection = Yii::app()->db;
+                    $employerQuery = "select * from employer";
+                    $employers = $connection->createCommand($employerQuery)->queryAll();
+                    
+                    $isBuss = false; 
+                    foreach($employers as $employer){
+                        if($employer['email'] ==  Yii::app()->user->id){
+                            print(" <button type=button class=btn btn-default btn-lg>
+                    <span class=glyphicon glyphicon-plus></span> <a style=text-decoration: none href= /SydeGig/index.php/site/jobpost><font color=black> Add Gigs </font> </a>
+                </button>
+
+                <button type=button class=btn btn-default btn-lg>
+                    <span class=glyphicon glyphicon-user></span> <a style=text-decoration: none href= /SydeGig/index.php/site/available><font color=black> View Available Employees </font> </a>
+                </button>");
+                            $isBuss = true; 
+                            break;
+                        } 
+                    }
+                    
+                    if(!$isBuss){
+                        print("<button type=button class=btn btn-default btn-lg>
+                    <span class=glyphicon glyphicon-user></span> <a style=text-decoration: none href= /SydeGig/index.php/site/availableGigs><font color=black> View Available Gigs </font> </a>
+                </button>");
+                    }
+                    
+                    
+                    ?>
+                
               
-              <!-- Need to validate user type -->
-              <button type="button" class="btn btn-default btn-lg">
-                  <span class="glyphicon glyphicon-plus"></span> <a href= "/google.com"><font color="black"> Add Gigs </font> </a>
-</button>
-              
-                 <button type="button" class="btn btn-default btn-lg">
-                  <span class="glyphicon glyphicon-user"></span> <a href= "/google.com"><font color="black"> View Available Employees </font> </a>
-</button>
+               
+                
+                
 
-          <div class=mastfoot>
-            <div class=inner>
-              <p>Cover template for <a href=http://getbootstrap.com>Bootstrap</a>, by <a href=https://twitter.com/mdo>@mdo</a>.</p>
+                <div class=mastfoot>
+                    <div class=inner>
+                        <p>Cover template for <a href=http://getbootstrap.com>Bootstrap</a>, by <a href=https://twitter.com/mdo>@mdo</a>.</p>
+                    </div>
+                </div>
+
             </div>
-          </div>
 
         </div>
-
-      </div>
 
     </div>
 
@@ -83,7 +112,7 @@
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js></script>
     <script src=../../dist/js/bootstrap.min.js></script>
     <script src=../../assets/js/docs.min.js></script>
-  </body>
+</body>
 </html>   
 
 
