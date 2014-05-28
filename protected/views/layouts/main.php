@@ -61,6 +61,7 @@ if ($flashMessages) {
           <ul class="nav navbar-nav">
             <li class="active"><a href="/SydeGig">Home</a></li>
             <li><a href="/SydeGig/index.php/site/login">Login</a></li>
+            <li><a href="/SydeGig/index.php/site/logout">Logout</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">SydeGig Options <b class="caret"></b></a>
               <ul class="dropdown-menu">

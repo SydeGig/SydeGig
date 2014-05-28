@@ -86,10 +86,50 @@
                 </button>");
                     }
                     
-                    
-                    ?>
+                    print("<div class=center>  
+                        <lead> My Gigs </lead> 
+                            <table class=table table-bordered table-hover width= 647>
+    <thead>
+        <tr class=warning>
+            <th>#</th>
+            <th>Job Title</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>");
+            $incrementor = 1;
+
+            $connection = Yii::app()->db;
+
+            $usersQuery = "select * from Gig where employee_id = (select e_id from employee where email='".Yii::app()->user->id."')";
+
+            $users = $connection->createCommand($usersQuery)->queryAll();
+            
+          
+
+            foreach ($users as $user) {
+
+                print(" <tr>
+                       <td>" . $incrementor . "</td>
+                       <td>". $user['title']." </td>");
+                $info = $connection->createCommand("select name n from employer where eid=".$user['employer_id'])->queryRow();
                 
-              
+                           
+                       print("<td>" . $info['n'] . "</td> </tr>");
+
+                $incrementor++;
+            }
+          print("
+        </tr>
+        <tr>
+
+    </tbody>
+</table> </div>");
+                    
+                    
+                  
+                
+              ?>
                
                 
                 

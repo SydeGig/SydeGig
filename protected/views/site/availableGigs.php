@@ -37,7 +37,7 @@
 
                 print(" <tr>
                        <td>" . $incrementor . "</td>
-                       <td>" . $user['title']  . "</td>");
+                       <td> <a style=text-decoration: none href= /SydeGig/index.php/site/pickupGig/?gig=".$user['pgid'].">". $user['title']."<font color=black> </font> </a> </td>");
                 $info = $connection->createCommand("select name n from employer where eid=".$user['employer_id'])->queryRow();
                 
                            

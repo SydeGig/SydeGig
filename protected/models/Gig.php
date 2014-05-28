@@ -7,6 +7,7 @@
  * @property integer $gid
  * @property integer $employee_id
  * @property integer $employer_id
+ * @property string $title
  */
 class Gig extends CActiveRecord
 {
@@ -37,10 +38,10 @@ class Gig extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('gid, employee_id, employer_id', 'numerical', 'integerOnly'=>true),
-                        array('Title', 'max'=>255),
+			array('title', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('gid, employee_id, employer_id', 'safe', 'on'=>'search'),
+			array('gid, employee_id, employer_id, title', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,7 @@ class Gig extends CActiveRecord
 			'gid' => 'Gid',
 			'employee_id' => 'Employee',
 			'employer_id' => 'Employer',
+			'title' => 'Title',
 		);
 	}
 
@@ -81,6 +83,7 @@ class Gig extends CActiveRecord
 		$criteria->compare('gid',$this->gid);
 		$criteria->compare('employee_id',$this->employee_id);
 		$criteria->compare('employer_id',$this->employer_id);
+		$criteria->compare('title',$this->title,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
