@@ -50,7 +50,20 @@
 
                 <div class=inner cover>
                     <h1 class=cover-heading>Welcome to SydeGig <?php
-                        echo Yii::app()->user->id;
+                    
+                      $connection = Yii::app()->db;
+
+            $usersQuery = "select * from employee where email='".Yii::app()->user->id."'";
+
+            $users = $connection->createCommand($usersQuery)->queryRow();
+            
+            if(!$users) {
+                $users = $connection->createCommand ("select * from employer where email ='".Yii::app()->user->id."'")->queryRow();
+                echo $users['name'];
+            } else {
+                echo $users['fname'];
+            }
+                       
                         ?>!</h1>
                     <p class=lead>Next Level Skill Sharing</p>
                     <p class=lead>
@@ -76,15 +89,93 @@
                     <span class=glyphicon glyphicon-user></span> <a style=text-decoration: none href= /SydeGig/index.php/site/available><font color=black> View Available Employees </font> </a>
                 </button>");
                             $isBuss = true; 
+                            
+                    
                             break;
                         } 
+                    }
+                    
+                    if($isBuss){
+                                print("<div class=center>  
+                        <lead> Taken Gigs </lead> 
+                            <table class=table table-bordered table-hover width= 647>
+    <thead>
+        <tr class=warning>
+            <th>#</th>
+            <th>Job Title</th>
+           
+        </tr>
+    </thead>
+    <tbody>");
+            $incrementor = 1;
+
+            $connection = Yii::app()->db;
+
+            $usersQuery = "select * from Gig where employer_id = (select eid from employer where email='".Yii::app()->user->id."')";
+
+            $users = $connection->createCommand($usersQuery)->queryAll();
+            
+          
+
+            foreach ($users as $user) {
+
+                print(" <tr>
+                       <td>" . $incrementor . "</td>
+                       <td>". $user['title']." </td>");
+                
+
+                $incrementor++;
+            }
+          print("
+        </tr>
+        <tr>
+
+    </tbody>
+</table> </div>");
+          
+                print("<div class=center>  
+                        <lead> Posted Gigs </lead> 
+                            <table class=table table-bordered table-hover width= 647>
+    <thead>
+        <tr class=warning>
+            <th>#</th>
+            <th>Job Title</th>
+        
+        </tr>
+    </thead>
+    <tbody>");
+            $incrementor = 1;
+
+            $connection = Yii::app()->db;
+
+            $usersQuery = "select * from PostedGigs where employer_id  = (select eid from employer where email='".Yii::app()->user->id."')";
+
+            $users = $connection->createCommand($usersQuery)->queryAll();
+            
+          
+
+            foreach ($users as $user) {
+
+                print(" <tr>
+                       <td>" . $incrementor . "</td>
+                       <td>". $user['title']." </td>");
+                
+
+                $incrementor++;
+            }
+          print("
+        </tr>
+        <tr>
+
+    </tbody>
+</table> </div>");
                     }
                     
                     if(!$isBuss){
                         print("<button type=button class=btn btn-default btn-lg>
                     <span class=glyphicon glyphicon-user></span> <a style=text-decoration: none href= /SydeGig/index.php/site/availableGigs><font color=black> View Available Gigs </font> </a>
                 </button>");
-                    }
+                    
                     
                     print("<div class=center>  
                         <lead> My Gigs </lead> 
@@ -125,8 +216,10 @@
 
     </tbody>
 </table> </div>");
+          
+          
                     
-                    
+              }      
                   
                 
               ?>
@@ -134,7 +227,7 @@
                 
                 
 
-                <div class=mastfoot>
+                <div class=container>
                     <div class=inner>
                         <p>Cover template for <a href=http://getbootstrap.com>Bootstrap</a>, by <a href=https://twitter.com/mdo>@mdo</a>.</p>
                     </div>

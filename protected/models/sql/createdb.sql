@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS `employee` (
 INSERT INTO `employee` (`e_id`,`email`, `fname`, `lname`) VALUES
 (1, "sam@sydegig.com", 'Sam', 'Sternberg');
 
+INSERT INTO `employee` (`e_id`,`email`, `fname`, `lname`) VALUES
+(2, "employee", 'SydeGig', 'Team');
 -- --------------------------------------------------------
 
 --
@@ -60,6 +62,9 @@ CREATE TABLE IF NOT EXISTS `employer` (
 
 INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
 (1, 'National Football League', 'info@nfl.com', 'Football');
+
+INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
+(2, 'SydeGig', 'employer', 'Computer Science');
 
 -- --------------------------------------------------------
 
@@ -91,8 +96,9 @@ CREATE TABLE IF NOT EXISTS `Permissions` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `Permissions` (`email`,`password`) VALUES ('sam@sydegig.com','parkslope');
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('admin','admin');
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('demo','demo');
+INSERT INTO `Permissions` (`email`,`password`) VALUES ('employee','employee'); /* Test Account */
+INSERT INTO `Permissions` (`email`,`password`) VALUES ('employer','employer'); /* Test Account */
+INSERT INTO `Permissions` (`email`,`password`) VALUES ('info@nfl.com','eagles');
 
 Create table if not exists `PostedGigs` (
     `pgid` int(11) DEFAULT NULL,
@@ -100,6 +106,4 @@ Create table if not exists `PostedGigs` (
     `employer_id` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
 
-INSERT INTO `PostedGigs` (`pgid`,`title`,`employer_id`) VALUES(1,'CEO',2);
-    
-    
+INSERT INTO `PostedGigs` (`pgid`,`title`,`employer_id`) VALUES(1,'CEO',1);
