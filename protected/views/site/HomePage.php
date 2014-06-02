@@ -1,4 +1,3 @@
-
 <?php if(Yii::app()->user->hasFlash('success')):?>
     <div class="info">
         <?php echo Yii::app()->user->getFlash('success'); ?>
@@ -118,7 +117,7 @@
 
             $connection = Yii::app()->db;
 
-            $usersQuery = "select * from Gig where employer_id = (select eid from employer where email='".Yii::app()->user->id."')";
+            $usersQuery = "select * from gig where employer_id = (select eid from employer where email='".Yii::app()->user->id."')";
 
             $users = $connection->createCommand($usersQuery)->queryAll();
             
@@ -199,7 +198,7 @@
 
             $connection = Yii::app()->db;
 
-            $usersQuery = "select * from Gig where employee_id = (select e_id from employee where email='".Yii::app()->user->id."')";
+            $usersQuery = "select * from gig where employee_id = (select e_id from employee where email='".Yii::app()->user->id."')";
 
             $users = $connection->createCommand($usersQuery)->queryAll();
             

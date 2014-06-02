@@ -59,16 +59,16 @@ if ($flashMessages) {
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/SydeGig">Home</a></li>
-            <li><a href="/SydeGig/index.php/site/login">Login</a></li>
-           <?php if(Yii::app()->user->id) print(" <li><a href=/SydeGig/index.php/site/logout>Logout</a></li>");?>
+            <li class="active"><a href="/index.php">Home</a></li>
+            <li><a href="/index.php/site/login">Login</a></li>
+           <?php if(Yii::app()->user->id) print(" <li><a href=/index.php/site/logout>Logout</a></li>");?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">SydeGig Options <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="mailto:niyi%40sydegig.com?subject=Contact%20Us">Contact Us</a></li>
+                <!-- <li><a href="mailto:niyi%40sydegig.com?subject=Contact%20Us">Contact Us</a></li> -->
                 <li class="divider"></li>
                 <li class="dropdown-header">Quick Nav</li>
-                <li><a href="http://www.google.com">Google</a></li>
+                <!-- <li><a href="http://www.google.com">Google</a></li> -->
               </ul>
             </li>
           </ul>

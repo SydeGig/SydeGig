@@ -6,6 +6,8 @@
  * data can identity the user.
  */
 class UserIdentity extends CUserIdentity {
+
+ private $_userType;
     
   
 
@@ -61,7 +63,7 @@ class UserIdentity extends CUserIdentity {
         $sessionUser = "blank";
 
         foreach ($users as $user) {
-            if ($user['email'] == $this->username && password_verify($user['password'],password_hash($user['password'],PASSWORD_DEFAULT))) {
+            if ($user['email'] == $this->username && /*password_verify(*/$user['password']/*,password_hash($user['password'],PASSWORD_DEFAULT)))*/ == $this->password) {
                 $sessionUser = $user;
             }
         }

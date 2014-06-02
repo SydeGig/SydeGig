@@ -7490,3 +7490,702 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/SydeGig/index.php/HomePage
 ---
+2014/06/01 19:58:21 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "businessSignup".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('businessSignup', Array, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(197): CController->render('businessSignup', Array)
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionBusinessSignup()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('businessSignup')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/businessSi...')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/businessSignup
+HTTP_REFERER=http://www.sydegig.com/index.php
+---
+2014/06/01 21:29:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost=127.0.0.1' (1)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:30:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (1)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:30:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:31:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user 'sydegigc_webuser'@'localhost' to database 'sydegigc_testdb'' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:31:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:3306' (1)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:32:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'webuser'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:32:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user 'sydegigc_webuser'@'localhost' to database 'sydegigc_testdb'' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:36:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc_webuser'@'hightide.nixihost.com' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:38:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: NO)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:38:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:38:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:39:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:39:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc_webuser'@'localhost' (using password: NO)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:42:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'localhost:2083' (1)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:43:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user 'sydegigc_webuser'@'localhost' to database 'testdb'' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:43:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:44:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:44:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:44:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'webuser'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:44:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'webuser'@'localhost' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:44:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user 'sydegigc_webuser'@'localhost' to database 'sydegigc_testdb'' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:47:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc_webuser'@'hightide.nixihost.com' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:48:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sam@sydegig.com'@'hightide.nixihost.com' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:48:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc_webuser'@'hightide.nixihost.com' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 21:53:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'sydegigc_webuser'@'hightide.nixihost.com' (using password: YES)' in /home/sydegigc/public_html/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/sydegigc/public_html/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/sydegigc/public_html/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/sydegigc/public_html/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/sydegigc/public_html/protected/models/SignupForm.php(64): CModule->__get('db')
+#5 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): SignupForm->authenticate('password', Array)
+#6 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(SignupForm), 'password')
+#7 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(SignupForm), NULL)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(218): CModel->validate()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://www.sydegig.com/index.php/site/signup
+---
+2014/06/01 22:08:50 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.pageTitle" is not defined.' in /home/sydegigc/public_html/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/sydegigc/public_html/protected/controllers/SiteController.php(6): CComponent->__set('pageTitle', 'SydeGig - Signu...')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(354): require('/home/sydegigc/...')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(276): CWebApplication->createController('')
+#3 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#4 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#6 {main}
+REQUEST_URI=/
+---
+2014/06/01 22:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/
+---
+2014/06/02 11:38:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/
+---
+2014/06/02 11:48:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/index.php
+---
+2014/06/02 12:29:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='').
+in /home/sydegigc/public_html/protected/views/site/HomePage.php (204)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (136)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/02 12:29:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='')' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/HomePage.php(204): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#4 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(136): CController->renderPartial('HomePage')
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionSignup()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('signup')
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/signup')
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/signup
+HTTP_REFERER=http://sydegig.com/index.php/site/signup
+---
+2014/06/02 12:31:38 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._userType" is not defined.' in /home/sydegigc/public_html/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/sydegigc/public_html/protected/components/UserIdentity.php(69): CComponent->__set('_userType', 'Business')
+#1 /home/sydegigc/public_html/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(163): CModel->validate()
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/02 12:39:53 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._userType" is not defined.' in /home/sydegigc/public_html/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/sydegigc/public_html/protected/components/UserIdentity.php(69): CComponent->__set('_userType', 'Business')
+#1 /home/sydegigc/public_html/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /home/sydegigc/public_html/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 /home/sydegigc/public_html/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 /home/sydegigc/public_html/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(163): CModel->validate()
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---

@@ -119,10 +119,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost:3306;dbname=SydeGig',
+			'connectionString' => 'mysql:host=localhost;dbname=sydegigc_testdb',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'sydegigc_webuser',
+			'password' => 'H337w337$',
 			'charset' => 'utf8',
 		),
 		

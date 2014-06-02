@@ -28,85 +28,7 @@ class SiteController extends Controller {
         $this->render("profile");
     }
     
-    public function actionPickupGig() {
-        $this->render('pickupGig');
-        if (isset($_GET['gig'])) {
-
-            $pgid = $_GET['gig'];
-
-            $connection = Yii::app()->db;
-
-            $postedGigsQuery = "select * from PostedGigs";
-
-            $postedGigs = $connection->createCommand($postedGigsQuery)->queryAll();
-
-            foreach ($postedGigs as $gig) {
-                if ($gig['pgid'] == $pgid) {
-                    
-                    $newGig = new Gig(); 
-                    // combine commands
-                    $newGig->title = $connection->createCommand("select title t from PostedGigs where pgid=".$pgid)->queryRow()['t'];
-                    $newGig->employee_id = $connection->createCommand("select e_id e from employee where email='".Yii::app()->user->id."'")->queryRow()['e'];
-                    $newGig->employer_id = $connection->createCommand("select employer_id e from PostedGigs where pgid=".$pgid)->queryRow()['e'];
-                    $calculateG_ID = "select max(gid) maximum from Gig";
-                    $maxE_ID = $connection->createCommand($calculateG_ID)->queryRow();
-                    $gig_id = $maxE_ID['maximum'];
-                    $gig_id++;
-                    $newGig->gid = $gig_id;
-                    $newGig->save();
-                    $connection->createCommand("delete from PostedGigs where pgid=" . $pgid)->query();
-                    break;
-                }
-            }
-        }
-    }
-
-    public function actionAvailableGigs() {
-        $this->render("availableGigs");
-    }
-
-    public function actionAvailable() {
-        $this->render("available");
-    }
-
-    public function actionJobPost() {
-        $model = new JobPostForm;
-
-
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'job-post-form') {
-
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-        if (isset($_POST['JobPostForm'])) {
-
-            $model->attributes = $_POST['JobPostForm'];
-            $JobPostForm = $_POST['JobPostForm'];
-// validate user input and redirect to the previous page if valid
-            if ($model->validate()) {
-                $connection = Yii::app()->db;
-                $newGig = new PostedGig();
-                // need to find employer_id; 
-                $newGig->employer_id = $connection->createCommand("select eid e from employer where email='" . $JobPostForm['username'] . "'")->queryRow()['e'];
-
-//back to employee creations
-                $newGig->title = $JobPostForm['title'];
-                $connection = Yii::app()->db;
-                $calculateE_ID = "select max(pgid) maximum from PostedGigs";
-                $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
-                $emp_id = $maxE_ID['maximum'];
-                $emp_id++;
-                $newGig->pgid = $emp_id;
-                $newGig->save();
-
-                Yii::app()->user->setFlash('success', 'Gig Posted.');
-                $this->renderPartial('HomePage');
-            }
-        } else {
-            $this->render('jobpost', array('model' => $model));
-        }
-    }
-
+    
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
@@ -129,29 +51,8 @@ class SiteController extends Controller {
         }
     }
 
-    /**
-     * Displays the contact page
-     */
-    public function actionContact() {
-        $model = new ContactForm;
-        if (isset($_POST['ContactForm'])) {
-            $model->attributes = $_POST['ContactForm'];
-            if ($model->validate()) {
-                $name = '=?UTF-8?B?' . base64_encode($model->name) . '?=';
-                $subject = '=?UTF-8?B?' . base64_encode($model->subject) . '?=';
-                $headers = "From: $name <{$model->email}>\r\n" .
-                        "Reply-To: {$model->email}\r\n" .
-                        "MIME-Version: 1.0\r\n" .
-                        "Content-Type: text/plain; charset=UTF-8";
-
-                mail(Yii::app()->params['adminEmail'], $subject, $model->body, $headers);
-                Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
-                $this->refresh();
-            }
-        }
-        $this->render('contact', array('model' => $model));
-    }
-
+    
+/*
     public function actionBusinessSignup() {
         $model = new BusinessSignupForm;
 
@@ -188,7 +89,7 @@ class SiteController extends Controller {
                 $newEmployer->save();
 
                 Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
-                $this->renderPartial('HomePage');
+                $this->rende('HomePage');
             }
         } else {
             $this->render('businessSignup', array('model' => $model));
@@ -218,10 +119,10 @@ class SiteController extends Controller {
 // Permissions
                 $newPermissions = new Permissions();
                 $newPermissions->email = $newEmployee->email;
-                $newPermissions->password = password_hash($SignupForm['password'], PASSWORD_DEFAULT);
-                $newPermissions->save();
+                $newPermissions->password = /*password_hash($SignupForm['password'], PASSWORD_DEFAULT); */
+               // $newPermissions->save();
 //back to employee creations
-                $newEmployee->fname = $SignupForm['fname'];
+              /*  $newEmployee->fname = $SignupForm['fname'];
                 $newEmployee->lname = $SignupForm['lname'];
                 $connection = Yii::app()->db;
                 $calculateE_ID = "select max(e_id) maximum from employee";
@@ -232,7 +133,7 @@ class SiteController extends Controller {
                 $newEmployee->save();
 
                 Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
-                $this->render('HomePage');
+                $this->renderPartial('HomePage');
             } else {
                 $this->render('signup', array('model' => $model));
             }
@@ -240,7 +141,7 @@ class SiteController extends Controller {
             $this->render('signup', array('model' => $model));
         }
     }
-
+*/
 // display the signup form
 
     /**
