@@ -7214,3 +7214,279 @@ REQUEST_URI=/SydeGig/index.php/site/availableGigs
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/views/site/availableGigs.php (42)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/protected/controllers/SiteController.php (57)
 in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php (15)
+2014/05/30 01:09:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('HomePage')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/HomePage')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/HomePage
+---
+2014/05/30 01:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('profile')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('profile')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/profile
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/login
+---
+2014/05/30 01:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:15:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:15:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:15:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:16:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "<".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CController.php(270): CController->missingAction('<')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(282): CController->run('<')
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('site/<')
+#3 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/SydeGig/index.php/site/%3C?php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+---
+2014/05/30 01:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+---
+2014/05/30 01:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+---
+2014/05/30 01:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+---
+2014/05/30 01:21:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage.php".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage.php')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage.php
+HTTP_REFERER=http://localhost/SydeGig/index.php/site/profile
+---
+2014/05/30 01:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+---
+2014/05/30 01:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+---
+2014/05/30 01:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+---
+2014/05/30 01:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HomePage".' in /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/web/CWebApplication.php(141): CWebApplication->runController('HomePage')
+#1 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/SydeGig/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/SydeGig/index.php/HomePage
+---

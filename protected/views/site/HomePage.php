@@ -39,6 +39,13 @@
 </head>
 
 <body>
+    
+    <ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="/SydeGig/index.php/site/profile">Profile</a></li>
+</ul>
 
     <div class=site-wrapper>
 

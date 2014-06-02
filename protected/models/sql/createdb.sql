@@ -28,12 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `employee` (
-  `e_id` int(11) DEFAULT NULL,
+  `e_id` int(11) NOT NULL Primary Key AUTO_INCREMENT = 1000,
   `email` varchar(255) DEFAULT NULL,
   `fname` varchar(255) DEFAULT NULL,
+   `currentLocation` varchar(255) DEFAULT NULL,
+  `desiredLocation` varchar(255) DEFAULT NULL,
+   `availability` varchar(255) DEFAULT NULL,
+   
   `lname` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+
+Create table if not exists `skills` (
+    `eid` int(11) DEFAULT NULL,
+    `title` varchar(255) DEFAULT NULL,
+    `level` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 --
 -- Dumping data for table `employee`
 --
@@ -76,7 +86,8 @@ CREATE TABLE IF NOT EXISTS `gig` (
   `gid` int(11) DEFAULT NULL,
   `employee_id` int(11) DEFAULT NULL,
   `employer_id` int(11) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL
+  `title` varchar(255) DEFAULT NULL,
+    `location` varchar(255) DEFAULT NULL,
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -107,3 +118,5 @@ Create table if not exists `PostedGigs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
 
 INSERT INTO `PostedGigs` (`pgid`,`title`,`employer_id`) VALUES(1,'CEO',1);
+
+

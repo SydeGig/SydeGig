@@ -19,7 +19,15 @@ class SiteController extends Controller {
             ),
         );
     }
+    
+    public function actionHomePage() {
+        $this->render("HomePage");
+    }
 
+    public function actionProfile() {
+        $this->render("profile");
+    }
+    
     public function actionPickupGig() {
         $this->render('pickupGig');
         if (isset($_GET['gig'])) {
@@ -224,7 +232,9 @@ class SiteController extends Controller {
                 $newEmployee->save();
 
                 Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
-                $this->renderPartial('HomePage');
+                $this->render('HomePage');
+            } else {
+                $this->render('signup', array('model' => $model));
             }
         } else {
             $this->render('signup', array('model' => $model));

@@ -7,7 +7,7 @@
  */
 class UserIdentity extends CUserIdentity {
     
-    public $_userType;
+  
 
     /**
      * Authenticates a user.
@@ -37,14 +37,15 @@ class UserIdentity extends CUserIdentity {
                 $sessionUser = $user;
             } else {
                 $sessionUser = "already taken";
+                break;
             }
         }
         if ($sessionUser !== "already taken") {
             $this->errorCode = self::ERROR_NONE;
            
-        } else
+        } else{
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-
+        }
       
         return !$this->errorCode;
     }
@@ -76,8 +77,6 @@ class UserIdentity extends CUserIdentity {
         return !$this->errorCode;
     }
     
-    public function getUserType(){
-        return $this->_userType;
-    }
+   
 
 }
