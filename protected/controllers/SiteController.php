@@ -19,7 +19,7 @@ class SiteController extends Controller {
             ),
         );
     }
-    
+
     public function actionHomePage() {
         $this->render("HomePage");
     }
@@ -27,8 +27,92 @@ class SiteController extends Controller {
     public function actionProfile() {
         $this->render("profile");
     }
-    
-    
+
+    public function actionPickupGig() {
+        $this->render('pickupGig');
+        if (isset($_GET['gig'])) {
+
+            $pgid = $_GET['gig'];
+
+            $connection = Yii::app()->db;
+
+            $postedGigsQuery = "select * from PostedGigs";
+
+            $postedGigs = $connection->createCommand($postedGigsQuery)->queryAll();
+
+            foreach ($postedGigs as $gig) {
+                if ($gig['pgid'] == $pgid) {
+
+                    $newGig = new Gig();
+                    // combine commands
+                    $titleInfo = $connection->createCommand("select title t from PostedGigs where pgid=" . $pgid)->queryRow();
+                    $newGig->title = $titleInfo['t'];
+                    $eid = $connection->createCommand("select e_id e from employee where email='" . Yii::app()->user->id . "'")->queryRow();
+                    $newGig->employee_id = $eid['e'];
+                    $employer = $connection->createCommand("select employer_id e from PostedGigs where pgid=" . $pgid)->queryRow();
+                    $newGig->employer_id = $employer['e'];
+                    $calculateG_ID = "select max(gid) maximum from Gig";
+                    $maxE_ID = $connection->createCommand($calculateG_ID)->queryRow();
+                    $gig_id = $maxE_ID['maximum'];
+                    $gig_id++;
+                    $newGig->gid = $gig_id;
+                    $newGig->save();
+                    $connection->createCommand("delete from PostedGigs where pgid=" . $pgid)->query();
+                    $this->render("HomePage");
+                }
+            }
+        } else {
+            echo "<lead> Please go back and try again <lead>";
+        }
+    }
+
+    public function actionAvailableGigs() {
+        $this->render("availableGigs");
+    }
+
+    public function actionAvailable() {
+        $this->render("available");
+    }
+
+    public function actionJobPost() {
+        $model = new JobPostForm;
+
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'job-post-form') {
+
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        if (isset($_POST['JobPostForm'])) {
+
+            $model->attributes = $_POST['JobPostForm'];
+            $JobPostForm = $_POST['JobPostForm'];
+// validate user input and redirect to the previous page if valid
+            if ($model->validate()) {
+                $connection = Yii::app()->db;
+                $newGig = new PostedGig();
+                // need to find employer_id; 
+                $employer = $connection->createCommand("select eid e from employer where email='" . $JobPostForm['username'] . "'")->queryRow();
+                $newGig->employer_id = $employer['e'];
+
+//back to employee creations
+                $newGig->title = $JobPostForm['title'];
+                $connection = Yii::app()->db;
+                $calculateE_ID = "select max(pgid) maximum from PostedGigs";
+                $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
+                $emp_id = $maxE_ID['maximum'];
+                $emp_id++;
+                $newGig->pgid = $emp_id;
+                $newGig->save();
+
+                Yii::app()->user->setFlash('success', 'Gig Posted.');
+                $this->renderPartial('HomePage');
+            }
+        } else {
+            $this->render('jobpost', array('model' => $model));
+        }
+    }
+
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
@@ -51,8 +135,6 @@ class SiteController extends Controller {
         }
     }
 
-    
-/*
     public function actionBusinessSignup() {
         $model = new BusinessSignupForm;
 
@@ -75,7 +157,7 @@ class SiteController extends Controller {
 // Permissions
                 $newPermissions = new Permissions();
                 $newPermissions->email = $newEmployer->email;
-                $newPermissions->password = password_hash($BusinessSignupForm['password'], PASSWORD_DEFAULT);
+                $newPermissions->password = crypt($BusinessSignupForm['password'], CRYPT_STD_DES);
                 $newPermissions->save();
 //back to employee creations
                 $newEmployer->name = $BusinessSignupForm['businessName'];
@@ -97,18 +179,13 @@ class SiteController extends Controller {
     }
 
     public function actionSignup() {
-
-
         $model = new SignupForm;
 
-
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'signup-form') {
-
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
         if (isset($_POST['SignupForm'])) {
-
             $model->attributes = $_POST['SignupForm'];
             $SignupForm = $_POST['SignupForm'];
 // validate user input and redirect to the previous page if valid
@@ -119,10 +196,10 @@ class SiteController extends Controller {
 // Permissions
                 $newPermissions = new Permissions();
                 $newPermissions->email = $newEmployee->email;
-                $newPermissions->password = /*password_hash($SignupForm['password'], PASSWORD_DEFAULT); */
-               // $newPermissions->save();
+                $newPermissions->password = crypt($SignupForm['password'], CRYPT_STD_DES);
+                $newPermissions->save();
 //back to employee creations
-              /*  $newEmployee->fname = $SignupForm['fname'];
+                $newEmployee->fname = $SignupForm['fname'];
                 $newEmployee->lname = $SignupForm['lname'];
                 $connection = Yii::app()->db;
                 $calculateE_ID = "select max(e_id) maximum from employee";
@@ -131,7 +208,6 @@ class SiteController extends Controller {
                 $emp_id++;
                 $newEmployee->e_id = $emp_id;
                 $newEmployee->save();
-
                 Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
                 $this->renderPartial('HomePage');
             } else {
@@ -141,7 +217,7 @@ class SiteController extends Controller {
             $this->render('signup', array('model' => $model));
         }
     }
-*/
+
 // display the signup form
 
     /**
@@ -149,19 +225,19 @@ class SiteController extends Controller {
      */
     public function actionLogin() {
         $model = new LoginForm;
-
 // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
-
 // collect user input data
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
 // validate user input and redirect to the previous page if valid
             if ($model->validate() && $model->login()) {
                 $this->render('HomePage');
+            } else {
+                $this->render('login', array('model' => $model));
             }
         } else {
             $this->render('login', array('model' => $model));
