@@ -19,13 +19,31 @@ class SiteController extends Controller {
             ),
         );
     }
+    
+    public function actionAPI() {
+    	$this->render('api');
+    }
+
+    // from http://stackoverflow.com/questions/2824805/how-to-get-response-as-json-formatapplication-json-in-yii
+    public function renderJSON($data) {
+
+        echo CJSON::encode($data);
+
+        foreach (Yii::app()->log->routes as $route) {
+            if ($route instanceof CWebLogRoute) {
+                $route->enabled = false; // disable any weblogroutes
+            }
+        }
+        Yii::app()->end();
+    }
 
     public function actionHomePage() {
         $this->render("HomePage");
+        echo $this->renderJSON(array('Malcolm' => 1, 'Test' => 2));
     }
 
     public function actionProfile() {
-        $this->render("profile");
+        $this->render("Profile");
     }
 
     public function actionPickupGig() {
@@ -74,6 +92,11 @@ class SiteController extends Controller {
         $this->render("available");
     }
 
+
+    public function actionConfirmation() {
+    	$this->render('confirmation');
+    }
+    	
     public function actionJobPost() {
         $model = new JobPostForm;
 
@@ -177,44 +200,82 @@ class SiteController extends Controller {
             $this->render('businessSignup', array('model' => $model));
         }
     }
+    
+    public function actionLISignup(){
+        $this->render('LinkedInFetcher');
+    }
 
     public function actionSignup() {
-        $model = new SignupForm;
-
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'signup-form') {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-        if (isset($_POST['SignupForm'])) {
-            $model->attributes = $_POST['SignupForm'];
-            $SignupForm = $_POST['SignupForm'];
+        if (isset($_GET['code'])) {
+            $model = new LISignupForm();
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'LIsignup-form') {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+            if (isset($_POST['LISignupForm'])) {
+                $model->attributes = $_POST['LISignupForm'];
+                $SignupForm = $_POST['LISignupForm'];
 // validate user input and redirect to the previous page if valid
-            if ($model->validate()) {
+                if ($model->validate()) {
+                    $newPermissions = new Permissions();
+                    $newPermissions->email = $SignupForm['username'];
+                    $newPermissions->password = crypt($SignupForm['password'], CRYPT_STD_DES);
+                    
+                    $connection = Yii::app()->db;
+                    $calculateE_ID = "select max(e_id) from employee";
+                    $maxID = $connection->createCommand($calculateE_ID)->queryRow();
+                    
+                    $query = "UPDATE employee
+				SET email='".$newPermissions->email."', 
+				WHERE e_id=".$maxID;
+                
+                    $newPermissions->save();
+                    Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
+                    $this->render('HomePage');
+                } else {
+                    $this->render('LIsignup', array('model' => $model));
+                }
+            } else {
+                $this->render('LIsignup', array('model' => $model));
+            }
+        } else {
+            $model = new SignupForm;
 
-                $newEmployee = new Employee();
-                $newEmployee->email = $SignupForm['username'];
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'signup-form') {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+            if (isset($_POST['SignupForm'])) {
+                $model->attributes = $_POST['SignupForm'];
+                $SignupForm = $_POST['SignupForm'];
+// validate user input and redirect to the previous page if valid
+                if ($model->validate()) {
+
+                    $newEmployee = new Employee();
+                    $newEmployee->email = $SignupForm['username'];
 // Permissions
-                $newPermissions = new Permissions();
-                $newPermissions->email = $newEmployee->email;
-                $newPermissions->password = crypt($SignupForm['password'], CRYPT_STD_DES);
-                $newPermissions->save();
+                    $newPermissions = new Permissions();
+                    $newPermissions->email = $newEmployee->email;
+                    $newPermissions->password = crypt($SignupForm['password'], CRYPT_STD_DES);
+                    $newPermissions->save();
 //back to employee creations
-                $newEmployee->fname = $SignupForm['fname'];
-                $newEmployee->lname = $SignupForm['lname'];
-                $connection = Yii::app()->db;
-                $calculateE_ID = "select max(e_id) maximum from employee";
-                $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
-                $emp_id = $maxE_ID['maximum'];
-                $emp_id++;
-                $newEmployee->e_id = $emp_id;
-                $newEmployee->save();
-                Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
-                $this->renderPartial('HomePage');
+                    $newEmployee->fname = $SignupForm['fname'];
+                    $newEmployee->lname = $SignupForm['lname'];
+                    $connection = Yii::app()->db;
+                    $calculateE_ID = "select max(e_id) maximum from employee";
+                    $maxE_ID = $connection->createCommand($calculateE_ID)->queryRow();
+                    $emp_id = $maxE_ID['maximum'];
+                    $emp_id++;
+                    $newEmployee->e_id = $emp_id;
+                    $newEmployee->save();
+                    Yii::app()->user->setFlash('signup', 'Thank you for signing up.');
+                    $this->render('HomePage');
+                } else {
+                    $this->render('signup', array('model' => $model));
+                }
             } else {
                 $this->render('signup', array('model' => $model));
             }
-        } else {
-            $this->render('signup', array('model' => $model));
         }
     }
 

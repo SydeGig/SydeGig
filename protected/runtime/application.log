@@ -8189,3 +8189,948 @@ Stack trace:
 REQUEST_URI=/index.php/site/login
 HTTP_REFERER=http://sydegig.com/index.php/site/login
 ---
+2014/06/03 01:38:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Employee' doesn't exist. The SQL statement executed was: select * from Employee.
+in /home/sydegigc/public_html/protected/views/site/available.php (32)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (72)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/03 01:38:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Employee' doesn't exist. The SQL statement executed was: select * from Employee' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/available.php(32): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#4 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('available', NULL, true)
+#6 /home/sydegigc/public_html/protected/controllers/SiteController.php(72): CController->render('available')
+#7 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionAvailable()
+#8 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('available')
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/available')
+#13 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/available
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/03 17:20:07 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/profile
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/03 17:20:33 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/profile
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/03 17:20:37 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('Profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/Profile
+---
+2014/06/03 17:20:39 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('Profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/Profile
+---
+2014/06/03 17:21:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='malcolm@sydegig.com').
+in /home/sydegigc/public_html/protected/views/site/Profile.php (193)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (28)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/03 17:21:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='malcolm@sydegig.com')' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/Profile.php(193): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#4 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('Profile', NULL, true)
+#6 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('Profile')
+#7 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#8 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('Profile')
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#13 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/Profile
+---
+2014/06/05 00:30:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='malcolm@sydegig.com').
+in /home/sydegigc/public_html/protected/views/site/HomePage.php (203)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (269)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/05 00:30:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gig' doesn't exist. The SQL statement executed was: select * from Gig where employee_id = (select e_id from employee where email='malcolm@sydegig.com')' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/HomePage.php(203): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#4 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('HomePage', NULL, true)
+#6 /home/sydegigc/public_html/protected/controllers/SiteController.php(269): CController->render('HomePage')
+#7 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/05 00:32:40 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/profile
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/05 00:33:21 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/profile
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/05 00:33:22 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/profile
+HTTP_REFERER=http://sydegig.com/index.php/site/login
+---
+2014/06/05 00:33:26 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(28): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('Profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/Profile
+---
+2014/06/05 00:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "signup".' in /home/sydegigc/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('signup')
+#1 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/signup
+---
+2014/06/05 00:49:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "signup.php".' in /home/sydegigc/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('signup.php')
+#1 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/signup.php
+---
+2014/06/12 21:27:24 [error] [php] Object of class stdClass could not be converted to string (/home/sydegigc/public_html/protected/views/site/index.php:38)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQTQ5eULotIMCDqVHKwJ7UtSdGa9fBwx7edaT6NNsq4scVjQrYKVchLKX2vdm1h3puweNBDL_PRnEn38o34PGWDcxiXtD2v6Lo4zUIPRcf2G7QpDvdY&state=539a5289f2fdf9%2E74675757
+in /home/sydegigc/public_html/protected/views/site/index.php (38)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 21:27:59 [error] [php] Object of class stdClass could not be converted to string (/home/sydegigc/public_html/protected/views/site/index.php:38)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQTQ5eULotIMCDqVHKwJ7UtSdGa9fBwx7edaT6NNsq4scVjQrYKVchLKX2vdm1h3puweNBDL_PRnEn38o34PGWDcxiXtD2v6Lo4zUIPRcf2G7QpDvdY&state=539a5289f2fdf9%2E74675757
+in /home/sydegigc/public_html/protected/views/site/index.php (38)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 21:28:01 [error] [php] Object of class stdClass could not be converted to string (/home/sydegigc/public_html/protected/views/site/index.php:38)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQTQ5eULotIMCDqVHKwJ7UtSdGa9fBwx7edaT6NNsq4scVjQrYKVchLKX2vdm1h3puweNBDL_PRnEn38o34PGWDcxiXtD2v6Lo4zUIPRcf2G7QpDvdY&state=539a5289f2fdf9%2E74675757
+in /home/sydegigc/public_html/protected/views/site/index.php (38)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:18:23 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: NO) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:18:39 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:19:11 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:25:46 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:25:48 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:25:49 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:26:46 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:26:48 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:10)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (10)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/12 22:27:44 [error] [php] mysql_query() expects at least 1 parameter, 0 given (/home/sydegigc/public_html/protected/views/site/index.php:17)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQQSnHawmdMH9tdPgcM5kZtz18LUjiM2GaEnP8UFRTV6_59WNJdz616Ph3ajVOB8UEbA1PAurk1TQY0ORCyMWJeWc8pt9xnX2HTkqpUhTHzAXLJ2h04&state=539a5e3216fa64%2E61295692
+in /home/sydegigc/public_html/protected/views/site/index.php (17)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/14 19:04:18 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:7)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQRr245zl_oYIKeRC8N0SDSeMPpzB4xehqC48FhntrjqeKxlNGbZaanMT6Aj4k06kQnBvyH_hbwM8L3_kYD-KHddkS_cgdTLOBECNIlJoKhpDxf2bmA&state=539cd1809057b9%2E44644107
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/14 19:07:26 [error] [php] mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'sydegigc_webuser'@'localhost' (using password: YES) (/home/sydegigc/public_html/protected/views/site/index.php:7)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQSYZPyJC9cY-wbkQojJbi7LoH-xLuvOSE0K2W9gS9rjuzaHk1DG3i5d4SyWZnfhalIyrewBFyEv9onxtGB1KDqmHpGCV8p87Z8rxKHTubP_nU1hjgo&state=539cd41ab45a66%2E33090748
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/14 19:15:24 [error] [php] Invalid argument supplied for foreach() (/home/sydegigc/public_html/protected/views/site/index.php:69)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQRr245zl_oYIKeRC8N0SDSeMPpzB4xehqC48FhntrjqeKxlNGbZaanMT6Aj4k06kQnBvyH_hbwM8L3_kYD-KHddkS_cgdTLOBECNIlJoKhpDxf2bmA&state=539cd1809057b9%2E44644107
+in /home/sydegigc/public_html/protected/views/site/index.php (69)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/14 20:14:56 [error] [php] Constants may only evaluate to scalar values (/home/sydegigc/public_html/protected/views/site/index.php:65)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(130): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQRsMHtsJtzpTrm8GBqLIziyyK0EOh4J8xMcfq2eDjwGVMEfNHZCcwWnnR5SiVPv4DQsU1kOmn0SCqsfk4Rp5M4kd7kYo1EuUJ8QHibp867ijZsH2RY&state=539ce575e2b9f8%2E27782581
+in /home/sydegigc/public_html/protected/views/site/index.php (65)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (130)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/15 16:20:01 [error] [php] mb_strlen() expects parameter 1 to be string, array given (/home/sydegigc/public_html/framework/validators/CStringValidator.php:84)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(794): Permissions->validate()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(217): Permissions->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(7): SiteController->actionSignup()
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require()
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): SiteController->render()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQShEAsHVUMjuSKSg0npzfT6qzgxcpsvA2t8H8IKe1gtECH3ZvTQsZn5s_pEWX_1W1I4qEQPo7iHck8Gwo5h0-jNvzKu-30Ui0nortuMS4Qwf8hlTIM&state=539dffceba6352%2E10657709
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (217)
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 16:24:08 [error] [php] mb_strlen() expects parameter 1 to be string, array given (/home/sydegigc/public_html/framework/validators/CStringValidator.php:84)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(794): Permissions->validate()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(217): Permissions->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(7): SiteController->actionSignup()
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require()
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): SiteController->render()
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/?code=AQShEAsHVUMjuSKSg0npzfT6qzgxcpsvA2t8H8IKe1gtECH3ZvTQsZn5s_pEWX_1W1I4qEQPo7iHck8Gwo5h0-jNvzKu-30Ui0nortuMS4Qwf8hlTIM&state=539dffceba6352%2E10657709
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (217)
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 16:58:44 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select max(e_id) maximum from employee).
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (217)
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 16:58:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select max(e_id) maximum from employee)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(217): CDbCommand->queryRow()
+#2 /home/sydegigc/public_html/protected/views/site/index.php(7): SiteController->actionSignup()
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#7 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#8 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#9 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/?code=AQSgO_16JMJURHRomnW-IPqUFZ-PWplV8MxPIon56OsGSGCguRR_Ect97xJYnD1XTqpWVKLlCR4UMkTvUukNh8NMkpp1sXwywKVLAgVheHBFSt-CI24&state=539e06b2332e13%2E32480805
+HTTP_REFERER=http://www.sydegig.com/?code=AQSgO_16JMJURHRomnW-IPqUFZ-PWplV8MxPIon56OsGSGCguRR_Ect97xJYnD1XTqpWVKLlCR4UMkTvUukNh8NMkpp1sXwywKVLAgVheHBFSt-CI24&state=539e06b2332e13%2E32480805
+---
+2014/06/15 17:09:44 [error] [php] max() [<a href='function.max'>function.max</a>]: When only one parameter is given, it must be an array (/home/sydegigc/public_html/protected/views/site/LinkedInFetcher.php:22)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(196): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionLISignup()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/LIsignup
+in /home/sydegigc/public_html/protected/views/site/LinkedInFetcher.php (22)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (196)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/15 17:16:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mgoldiner@me.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `Permissions` (`email`, `password`) VALUES (:yp0, :yp1).
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (222)
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 17:16:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mgoldiner@me.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `Permissions` (`email`, `password`) VALUES (:yp0, :yp1)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(222): CActiveRecord->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(7): SiteController->actionSignup()
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/?code=AQSpzpP2Dy4I8PB0kt0VkM4Be-vPVfNWEIhgeYV8MOKqj5408NhYifr-mbTb1xqPp2ouXqeYkaRQyvNFVNGQ86bwaP7sVX-2rjMilt0OgNC1QVoQ418&state=539e0d1444a096%2E18212924
+HTTP_REFERER=http://www.sydegig.com/?code=AQSpzpP2Dy4I8PB0kt0VkM4Be-vPVfNWEIhgeYV8MOKqj5408NhYifr-mbTb1xqPp2ouXqeYkaRQyvNFVNGQ86bwaP7sVX-2rjMilt0OgNC1QVoQ418&state=539e0d1444a096%2E18212924
+---
+2014/06/15 17:22:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mgoldiner@me.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `Permissions` (`email`, `password`) VALUES (:yp0, :yp1).
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (223)
+in /home/sydegigc/public_html/protected/views/site/index.php (7)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 17:22:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'mgoldiner@me.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `Permissions` (`email`, `password`) VALUES (:yp0, :yp1)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(223): CActiveRecord->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(7): SiteController->actionSignup()
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/?code=AQTpMfGIhqvvfcTkYK3CX3NXugtg1URyIqlzEbYRZ2OmJjyGSHXrNxUiyPnfzbS8dsSpP0edbFVZ4rCdJWE9lNQgXoIUjkpVTXuf0Rev9hI0yk1ieME&state=539e0d780381d0%2E71666916
+HTTP_REFERER=http://www.sydegig.com/?code=AQTpMfGIhqvvfcTkYK3CX3NXugtg1URyIqlzEbYRZ2OmJjyGSHXrNxUiyPnfzbS8dsSpP0edbFVZ4rCdJWE9lNQgXoIUjkpVTXuf0Rev9hI0yk1ieME&state=539e0d780381d0%2E71666916
+---
+2014/06/15 19:27:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/sydegigc/public_html/protected/views/site/index.php (213)
+in /home/sydegigc/public_html/protected/views/site/index.php (80)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 19:27:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /home/sydegigc/public_html/protected/views/site/index.php(213): CActiveRecord->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(80): fetch('GET', '/v1/people/~:(f...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/?code=AQREZ_hqd4MAXKIG_gTwY7azjzfpXNskUDzZXoOrTOsb-Q2fXlOt--G-8Y6vjhA6uAIdDhqI52DA4PwO6bctYGS8f_HIRYmo1q-p6XM2weL4J65UO3Y&state=539e2bdd569719%2E96131060
+---
+2014/06/15 20:14:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/sydegigc/public_html/protected/views/site/index.php (213)
+in /home/sydegigc/public_html/protected/views/site/index.php (80)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 20:14:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /home/sydegigc/public_html/protected/views/site/index.php(213): CActiveRecord->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(80): fetch('GET', '/v1/people/~:(f...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/?code=AQRSrM3SanQ7Cg6KZchxrdjSQOF53zffWQexK4iAOpGFgug62dgM41y5Q5lhyD0UjINgUSsIFqAZwvDX14_6eNBAVXqtbJx8vL3ex4H64_nVqJ2AT18&state=539e36d3bd5cd5%2E52344464
+---
+2014/06/15 20:14:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in /home/sydegigc/public_html/protected/views/site/index.php (213)
+in /home/sydegigc/public_html/protected/views/site/index.php (80)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (137)
+2014/06/15 20:14:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test' for key 'email'. The SQL statement executed was: INSERT INTO `employee` (`email`, `e_id`, `fname`, `lname`) VALUES (:yp0, :yp1, :yp2, :yp3)' in /home/sydegigc/public_html/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /home/sydegigc/public_html/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /home/sydegigc/public_html/protected/views/site/index.php(213): CActiveRecord->save()
+#3 /home/sydegigc/public_html/protected/views/site/index.php(80): fetch('GET', '/v1/people/~:(f...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#5 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#7 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /home/sydegigc/public_html/protected/controllers/SiteController.php(137): CController->render('index')
+#9 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/?code=AQQRyN5faP0D7Xz6lw8hjExlnlJsmh8l7sQuy4LHnCw-g1S9V6EuJs-qR8QAIDuzP5GUnM_0uwOAunoGCU2UOr-0UUIAuMGqwn6J3ywyEwBqRsYPgGo&state=539e36d3bd5cd5%2E52344464
+---
+2014/06/15 21:22:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "LIsignup.php".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('LIsignup.php')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('LIsignup.php')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/LIsignup.p...')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/LIsignup.php?code=AQSEWpGyO4HuddEO9rGd3KQjJeWIXH66Z_c6EDI9tK55EGrugHp-fBu4P3IHT-0qnjao5xu1mhKev1sSA1i3vWke4QC2X9nqfKdjOGCKatqZslGiY8M&state=539e46d703f205%2E13397522
+---
+2014/06/15 21:24:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "LIsignup.php".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('LIsignup.php')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('LIsignup.php')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/LIsignup.p...')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/LIsignup.php?code=AQSEWpGyO4HuddEO9rGd3KQjJeWIXH66Z_c6EDI9tK55EGrugHp-fBu4P3IHT-0qnjao5xu1mhKev1sSA1i3vWke4QC2X9nqfKdjOGCKatqZslGiY8M&state=539e46d703f205%2E13397522
+---
+2014/06/15 21:24:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "LIsignup.php".' in /home/sydegigc/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(270): CController->missingAction('LIsignup.php')
+#1 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('LIsignup.php')
+#2 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/LIsignup.p...')
+#3 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/LIsignup.php?code=AQT_WXM5XpisvBiccAnI5m2TTDwzATqWcTZw6fpBinVTbwNe3KoC7xRa4DqtL8iVC7ciGYMpqyCzhTZPfRp__49d9vu0atmXPd8jCuHgrrbO_ELf7oE&state=539e46d703f205%2E13397522
+---
+2014/06/16 13:45:38 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "profile".' in /home/sydegigc/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('profile', NULL, true)
+#1 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): CController->render('profile')
+#2 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#3 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('Profile')
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/Profile')
+#8 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php/site/Profile
+HTTP_REFERER=http://www.sydegig.com/index.php/site/login
+---
+2014/06/16 13:51:46 [error] [php] mysql_fetch_object(): supplied argument is not a valid MySQL result resource (/home/sydegigc/public_html/protected/views/site/Profile.php:86)
+Stack trace:
+#0 /home/sydegigc/public_html/protected/views/site/Profile.php(48): fetch()
+#1 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#3 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#4 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): SiteController->render()
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/Profile
+in /home/sydegigc/public_html/protected/views/site/Profile.php (86)
+in /home/sydegigc/public_html/protected/views/site/Profile.php (102)
+in /home/sydegigc/public_html/protected/views/site/Profile.php (48)
+2014/06/16 13:54:18 [error] [php] mysql_fetch_object(): supplied argument is not a valid MySQL result resource (/home/sydegigc/public_html/protected/views/site/Profile.php:86)
+Stack trace:
+#0 /home/sydegigc/public_html/protected/views/site/Profile.php(48): fetch()
+#1 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require()
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#3 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#4 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): SiteController->render()
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/Profile
+in /home/sydegigc/public_html/protected/views/site/Profile.php (86)
+in /home/sydegigc/public_html/protected/views/site/Profile.php (104)
+in /home/sydegigc/public_html/protected/views/site/Profile.php (48)
+2014/06/16 14:12:56 [error] [php] Invalid argument supplied for foreach() (/home/sydegigc/public_html/protected/views/site/Profile.php:216)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/Profile
+in /home/sydegigc/public_html/protected/views/site/Profile.php (216)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (42)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/16 14:13:30 [error] [php] Invalid argument supplied for foreach() (/home/sydegigc/public_html/protected/views/site/Profile.php:217)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/Profile
+in /home/sydegigc/public_html/protected/views/site/Profile.php (217)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (42)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/16 18:06:08 [error] [php] Invalid argument supplied for foreach() (/home/sydegigc/public_html/protected/views/site/Profile.php:219)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /home/sydegigc/public_html/protected/controllers/SiteController.php(42): SiteController->render()
+#3 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionProfile()
+#4 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#6 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/Profile
+in /home/sydegigc/public_html/protected/views/site/Profile.php (219)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (42)
+in /home/sydegigc/public_html/index.php (15)
+2014/06/18 00:38:45 [error] [php] Missing argument 1 for getGigsForUser(), called in /home/sydegigc/public_html/protected/views/site/api.php on line 26 and defined (/home/sydegigc/public_html/protected/views/site/api.php:57)
+Stack trace:
+#0 /home/sydegigc/public_html/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /home/sydegigc/public_html/framework/web/CController.php(869): SiteController->renderFile()
+#2 /home/sydegigc/public_html/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /home/sydegigc/public_html/protected/controllers/SiteController.php(24): SiteController->render()
+#4 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionAPI()
+#5 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/sydegigc/public_html/framework/web/CController.php(286): SiteController->runAction()
+#7 /home/sydegigc/public_html/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/sydegigc/public_html/index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php/site/api/?eid=1&query=gigsForUser
+in /home/sydegigc/public_html/protected/views/site/api.php (57)
+in /home/sydegigc/public_html/protected/views/site/api.php (26)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (24)
+2014/06/18 00:40:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gigs' doesn't exist. The SQL statement executed was: select * from Gigs where e_id=1.
+in /home/sydegigc/public_html/protected/views/site/api.php (61)
+in /home/sydegigc/public_html/protected/views/site/api.php (26)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (24)
+2014/06/18 00:40:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sydegigc_testdb.Gigs' doesn't exist. The SQL statement executed was: select * from Gigs where e_id=1' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/api.php(61): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/protected/views/site/api.php(26): getGigsForUser('1')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('api', NULL, true)
+#7 /home/sydegigc/public_html/protected/controllers/SiteController.php(24): CController->render('api')
+#8 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionAPI()
+#9 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('api')
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/api')
+#14 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/site/api/?eid=1&query=gigsForUser
+---
+2014/06/18 00:40:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_id' in 'where clause'. The SQL statement executed was: select * from gig where e_id=1.
+in /home/sydegigc/public_html/protected/views/site/api.php (61)
+in /home/sydegigc/public_html/protected/views/site/api.php (26)
+in /home/sydegigc/public_html/protected/controllers/SiteController.php (24)
+2014/06/18 00:40:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'e_id' in 'where clause'. The SQL statement executed was: select * from gig where e_id=1' in /home/sydegigc/public_html/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/sydegigc/public_html/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/sydegigc/public_html/protected/views/site/api.php(61): CDbCommand->queryAll()
+#2 /home/sydegigc/public_html/protected/views/site/api.php(26): getGigsForUser('1')
+#3 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#4 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#5 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#6 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('api', NULL, true)
+#7 /home/sydegigc/public_html/protected/controllers/SiteController.php(24): CController->render('api')
+#8 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionAPI()
+#9 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('api')
+#13 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/api')
+#14 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/site/api/?eid=1&query=gigsForUser
+---
+2014/06/18 00:49:11 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.SiteController" is not defined.' in /home/sydegigc/public_html/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/sydegigc/public_html/protected/views/site/api.php(26): CComponent->__get('SiteController')
+#1 /home/sydegigc/public_html/framework/web/CBaseController.php(126): require('/home/sydegigc/...')
+#2 /home/sydegigc/public_html/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sydegigc/...', NULL, true)
+#3 /home/sydegigc/public_html/framework/web/CController.php(869): CBaseController->renderFile('/home/sydegigc/...', NULL, true)
+#4 /home/sydegigc/public_html/framework/web/CController.php(782): CController->renderPartial('api', NULL, true)
+#5 /home/sydegigc/public_html/protected/controllers/SiteController.php(24): CController->render('api')
+#6 /home/sydegigc/public_html/framework/web/actions/CInlineAction.php(49): SiteController->actionAPI()
+#7 /home/sydegigc/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/sydegigc/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/sydegigc/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/sydegigc/public_html/framework/web/CWebApplication.php(282): CController->run('api')
+#11 /home/sydegigc/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/api')
+#12 /home/sydegigc/public_html/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/sydegigc/public_html/index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/api/?eid=1&query=gigsForUser
+---

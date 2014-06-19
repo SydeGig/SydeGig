@@ -1,27 +1,27 @@
 <?php
 /* @var $this SiteController */
-/* @var $model LoginForm */
+/* @var $model LISignupForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Signup';
+$this->pageTitle=Yii::app()->name . ' - LinkedInSignup';
 $this->breadcrumbs=array(
-	'Signup',
+	'LinkedInSignup',
 );
-
 ?>
 
-<h1>New User Signup</h1>
+<h1>New User Signup through LinkedIn</h1>
 
-<p>Please fill out the following form with your desired login credentials:</p>
+<p>We got your info from LinkedIn! <br>, We just need to add a username and a password:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'signup-form',
+	'id'=>'LIsignup-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-)); ?>
+)); 
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -29,18 +29,6 @@ $this->breadcrumbs=array(
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
-	</div>
-        <div class="row">
-        	<?php echo firstName; ?>
-		<?php echo $form->labelEx($model,'First Name'); ?>
-		<?php echo $form->textField($model,'fname'); ?>
-		<?php echo $form->error($model,'fname'); ?>
-	</div>
-        <div class="row">
-        	<?php echo lastName; ?>
-		<?php echo $form->labelEx($model,'Last Name'); ?>
-		<?php echo $form->textField($model,'lname'); ?>
-		<?php echo $form->error($model,'lname'); ?>
 	</div>
 
 	<div class="row">
@@ -51,14 +39,6 @@ $this->breadcrumbs=array(
 		<p class="hint">
 			Hint: Your email address is a good username.
 		</p>
-	</div>
-        
-    
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
 
 	<div class="row buttons">

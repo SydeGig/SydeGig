@@ -1,122 +1,62 @@
--- phpMyAdmin SQL Dump
--- version 4.1.8
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: May 17, 2014 at 12:01 PM
--- Server version: 5.1.73-cll
--- PHP Version: 5.4.23
+CREATE TABLE `Permissions` (
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`email`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-USE SydeGig;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+CREATE TABLE `PostedGigs` (
+  `pgid` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `employer_id` varchar(255) NOT NULL,
+  PRIMARY KEY (`pgid`),
+  UNIQUE KEY `pgid_UNIQUE` (`pgid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
+CREATE TABLE `Tokens` (
+  `e_id` int(11) NOT NULL AUTO_INCREMENT,
+  `token` int(255) NOT NULL,
+  UNIQUE KEY `e_id_UNIQUE` (`e_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `sydegigc_testdb`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `employee`
---
-
-CREATE TABLE IF NOT EXISTS `employee` (
-  `e_id` int(11) NOT NULL Primary Key AUTO_INCREMENT = 1000,
-  `email` varchar(255) DEFAULT NULL,
+CREATE TABLE `employee` (
+  `e_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
   `fname` varchar(255) DEFAULT NULL,
-   `currentLocation` varchar(255) DEFAULT NULL,
+  `currentLocation` varchar(255) DEFAULT NULL,
   `desiredLocation` varchar(255) DEFAULT NULL,
-   `availability` varchar(255) DEFAULT NULL,
-   
-  `lname` varchar(255) DEFAULT NULL
+  `availability` varchar(255) DEFAULT NULL,
+  `lname` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`e_id`),
+  UNIQUE KEY `e_id_UNIQUE` (`e_id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `employer` (
+  `eid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `industry` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`eid`),
+  UNIQUE KEY `eid_UNIQUE` (`eid`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `gig` (
+  `gid` int(11) NOT NULL AUTO_INCREMENT,
+  `employee_id` int(11) NOT NULL,
+  `employer_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  PRIMARY KEY (`gid`),
+  UNIQUE KEY `gid_UNIQUE` (`gid`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `skills` (
+  `eid` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `level` varchar(255) NOT NULL,
+  PRIMARY KEY (`eid`),
+  UNIQUE KEY `eid_UNIQUE` (`eid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-
-Create table if not exists `skills` (
-    `eid` int(11) DEFAULT NULL,
-    `title` varchar(255) DEFAULT NULL,
-    `level` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
---
--- Dumping data for table `employee`
---
-
-INSERT INTO `employee` (`e_id`,`email`, `fname`, `lname`) VALUES
-(1, "sam@sydegig.com", 'Sam', 'Sternberg');
-
-INSERT INTO `employee` (`e_id`,`email`, `fname`, `lname`) VALUES
-(2, "employee", 'SydeGig', 'Team');
--- --------------------------------------------------------
-
---
--- Table structure for table `employer`
---
-
-CREATE TABLE IF NOT EXISTS `employer` (
-  `eid` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `industry` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `employer`
---
-
-INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
-(1, 'National Football League', 'info@nfl.com', 'Football');
-
-INSERT INTO `employer` (`eid`, `name`, `email`, `industry`) VALUES
-(2, 'SydeGig', 'employer', 'Computer Science');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gig`
---
-
-CREATE TABLE IF NOT EXISTS `gig` (
-  `gid` int(11) DEFAULT NULL,
-  `employee_id` int(11) DEFAULT NULL,
-  `employer_id` int(11) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-    `location` varchar(255) DEFAULT NULL,
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `gig`
---
-
-INSERT INTO `gig` (`gid`, `employee_id`, `employer_id`,`title`) VALUES
-(1, 1, 1,"Commissioner");
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE TABLE IF NOT EXISTS `Permissions` (
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('sam@sydegig.com','parkslope');
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('employee','employee'); /* Test Account */
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('employer','employer'); /* Test Account */
-INSERT INTO `Permissions` (`email`,`password`) VALUES ('info@nfl.com','eagles');
-
-Create table if not exists `PostedGigs` (
-    `pgid` int(11) DEFAULT NULL,
-    `title` varchar (255) DEFAULT NULL,
-    `employer_id` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
-
-INSERT INTO `PostedGigs` (`pgid`,`title`,`employer_id`) VALUES(1,'CEO',1);
-
-

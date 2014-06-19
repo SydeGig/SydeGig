@@ -7,7 +7,9 @@
  */
 class UserIdentity extends CUserIdentity {
 
-    private $_userType;
+ private $_userType;
+    
+  
 
     /**
      * Authenticates a user.
@@ -18,17 +20,17 @@ class UserIdentity extends CUserIdentity {
      * @return boolean whether authentication succeeds.
      */
     public function validateNewUser() {
-
+       
         $connection = Yii::app()->db;
 
         $credentialsQuery = "select * from Permissions";
 
         $users = $connection->createCommand($credentialsQuery)->queryAll();
 
-// additional password validation
-// name validation
-// email address verification
-
+        // additional password validation
+        // name validation
+        // email address verification
+        
         $sessionUser = "empty";
 
         foreach ($users as $user) {
@@ -42,10 +44,11 @@ class UserIdentity extends CUserIdentity {
         }
         if ($sessionUser !== "already taken") {
             $this->errorCode = self::ERROR_NONE;
-        } else {
+           
+        } else{
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         }
-
+      
         return !$this->errorCode;
     }
 
@@ -60,8 +63,7 @@ class UserIdentity extends CUserIdentity {
         $sessionUser = "blank";
 
         foreach ($users as $user) {
-            if ($user['email'] == $this->username && crypt($this->password, CRYPT_STD_DES) == $user['password']) {
-
+            if ($user['email'] == $this->username && /*password_verify(*/$user['password']/*,password_hash($user['password'],PASSWORD_DEFAULT)))*/ == crypt($this->password,CRYPT_STD_DES)) {
                 $sessionUser = $user;
             }
         }
@@ -73,8 +75,10 @@ class UserIdentity extends CUserIdentity {
         } else
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
 
-        $this->setState("userType", $this->_userType);
+        $this->setState("userType",$this->_userType);
         return !$this->errorCode;
     }
+    
+   
 
 }

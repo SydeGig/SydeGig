@@ -1,3 +1,4 @@
+
 <?php if(Yii::app()->user->hasFlash('success')):?>
     <div class="info">
         <?php echo Yii::app()->user->getFlash('success'); ?>
@@ -13,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen, projection" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-3.1.1-dist/css/cover.css" media="screen, projection" />
     </head>
-
+   
 
     <meta charset=utf-8>
     <meta http-equiv=X-UA-Compatible content=IE=edge>
@@ -43,7 +44,7 @@
   <li class="active">
     <a href="#">Home</a>
   </li>
-  <li><a href="/SydeGig/index.php/site/profile">Profile</a></li>
+  <li><a href="/index.php/site/Profile">Profile</a></li>
 </ul>
 
     <div class=site-wrapper>
@@ -183,9 +184,9 @@
                 </button>");
                     
                     
-                    print("<div class=center>  
+                    print("<div class=center style=margin-top:20px;>  
                         <lead> My Gigs </lead> 
-                            <table class=table table-bordered table-hover width= 647>
+                             <table class=table table-bordered table-hover width= 647>
     <thead>
         <tr class=warning>
             <th>#</th>
@@ -233,7 +234,7 @@
                 
                 
 
-                <div class=container>
+                <div class=container style="margin-top:10px";>
                     <div class=inner>
                         <p>Cover template for <a href=http://getbootstrap.com>Bootstrap</a>, by <a href=https://twitter.com/mdo>@mdo</a>.</p>
                     </div>

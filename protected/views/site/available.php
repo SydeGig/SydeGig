@@ -27,7 +27,7 @@
 
             $connection = Yii::app()->db;
 
-            $usersQuery = "select * from Employee";
+            $usersQuery = "select * from employee";
 
             $users = $connection->createCommand($usersQuery)->queryAll();
 
